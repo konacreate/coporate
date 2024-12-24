@@ -1,0 +1,106 @@
+@use "../../global" as *;
+
+.c-button-top {
+  display: inline-block;
+  padding-block: rm(8) rm(5);
+  padding-inline: 0 rm(140);
+
+  @include mq(sp) {
+    padding-inline: 0 rm(97);
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      .c-button-top__arrow {
+        width: rm(145);
+      }
+    }
+  }
+
+  .c-button-top__text {
+    font-family: $ff-en;
+    font-size: rm(32);
+    font-weight: 500;
+    display: inline-block;
+    font-style: italic;
+    color: $white;
+    position: relative;
+
+    &.--black {
+      color: $color-text;
+    }
+  }
+
+  .c-button-top__arrow {
+    position: absolute;
+    z-index: 2;
+    width: rm(95);
+    height: rm(2);
+    background: $white;
+    left: calc(100% + rm(19));
+    top: calc(50% + rm(3));
+    translate: 0 -50%;
+    transition: width 0.5s ease;
+
+    @include mq(sp) {
+      width: rm(64);
+      left: calc(100% + rm(13));
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - rm(5));
+      translate: 0 -50%;
+      rotate: 45deg;
+      left: calc(100% - rm(13));
+      background: $white;
+      transition: left 0.5s ease;
+      height: rm(2);
+      width: rm(16);
+
+      @include mq(sp) {
+        top: calc(50% - rm(5.4));
+        left: calc(100% - rm(14.6));
+      }
+      }
+
+
+      &.--black {
+        background: $color-text;
+
+        &::before {
+          background: $color-text;
+        }
+      }
+    }
+
+  .c-button-top__circle {
+    width: rm(51);
+    height: rm(51);
+    border-radius: 50%;
+    border: 3px solid $yellow;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: calc(100% + rm(89));
+
+    @include mq(sp) {
+      width: rm(40);
+      height: rm(40);
+      border-width: 2px;
+      left: calc(100% + rm(57));
+    }
+
+    &.--fill {
+      background: $yellow;
+    }
+  }
+}
+
+.wrap {
+  background: #000;
+}
+.wrap-white {
+  background: skyblue;
+}

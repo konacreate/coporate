@@ -2,49 +2,82 @@
 
 //ヘッダー ========================
 .p-header {
-  position: fixed;
-  z-index: $z-header;
-  top: 0;
-  left: 0;
   width: 100%;
   height: auto;
+  padding: rm(16);
+  background: $white;
 
-  padding-inline: rm(40);
-  background: #e7f482;
+  @include mq(lg) {
+    padding: rm(12) rm(20) rm(13);
+  }
 }
 .p-header__inner {
   display: grid;
   align-items: center;
-  
-  grid-template-columns: rm(150) 1fr;
-  padding-block: rm(17);
+  grid-template-columns: rm(282) 1fr;
+
+  @include mq(lg) {
+    grid-template-columns: rm(200) 1fr;
+  }
 }
 .p-header__logo {
-  font-size: rm(20);
+  color: $hover-color;
+  font-family: $ff-sub;
+  font-size: rm(40);
+  font-weight: 700;
+  text-transform: capitalize;
+
+  @include mq(lg) {
+    font-size: rm(28);
+    letter-spacing: 0.005em;
+  }
 }
 .p-header__nav {
   display: flex;
   align-items: center;
   justify-content: end;
-  column-gap: rm(60);
-  //spの場合非表示
-  @include mq(sp) {
+  column-gap: rm(32);
+  //lgの場合非表示
+  @include mq(lg) {
     display: none;
   }
 }
 .p-header__list {
   display: flex;
   align-items: center;
-  column-gap: rm(32);
+  column-gap: rm(46);
+
+  li {
+    &:not(:first-child) {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: rm(20);
+        height: 1px;
+        rotate: 135deg;
+        top: 50%;
+        translate: 0 -50%;
+        right: calc(100% + rm(16));
+        background: $color-text;
+      }
+    }
+  }
+
   li a {
-    font-size: rm(20);
+    @include font(14, 500, 24, );
   }
 }
-.p-header__btn {
-  padding:rm(8) rm(26);
-  background: #fff;
-  border: 1px solid #fff;
-  color: #001A75;
-  font-size: rm(20);
-  transition: all 0.3s ease;
+
+.p-header__button-wrapper {
+  display: flex;
+  column-gap: rm(10)
+}
+
+.p-header__button {
+  @include font(14, 500, 24, );
+  width: rm(176);
+  height: rm(68);
+  display: grid;
+  place-items: center;
 }

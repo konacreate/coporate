@@ -2,6 +2,7 @@
 $ff: 'Noto Sans JP', sans-serif; // bodyに指定するフォント
 $ff-jp: 'Noto Sans JP', sans-serif; //日本語onlyのフォント
 $ff-en: "Fira Sans", serif; //英語onlyのフォント
+$ff-sub: "Roboto", serif;
 
 
 //===========================================
@@ -20,6 +21,7 @@ $sp-inner: 600;
 $sp-inner-sum: calc($sp-inner + $sp-sidePadding * 2);
 
 $sm-breakpoint: 500; // small版ブレイクポイント
+$lg-breakpoint: 1200; // large版ブレイクポイント
 
 
 //z-index

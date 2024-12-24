@@ -9,7 +9,7 @@ $breakpoints: (
   "sp": "screen and (max-width: #{$breakpoint - 1px})",
 	"sp-lg": "(min-width: #{$sp-inner-sum * 1px})",
   "pc": "(min-width: #{$breakpoint * 1px})",
-  "lg": "(min-width: #{$pc-inner-sum * 1px})"
+  "lg": "(min-width: #{$lg-breakpoint * 1px})"
 ) !default;
 
 @mixin mq($breakpoint: sp) {

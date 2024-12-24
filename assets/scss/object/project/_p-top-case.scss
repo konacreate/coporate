@@ -1,0 +1,58 @@
+@use "../../global" as *;
+
+.p-top-case__card {
+  display: grid;
+  place-items: center;
+
+  @media(any-hover: hover) {
+    &:hover {
+      .p-top-case__body::after {
+        background-image: url(../img/arrow-icon-active.svg);
+        right: 0;
+      }
+    }
+  }
+}
+
+.p-top-case__img {
+  width: rm(320);
+  height: rm(240);
+  background: $white;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-top-case__body {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: rm(30);
+    height: rm(30);
+    bottom: 0;
+    right: rm(8);
+    background: url(../img/arrow-icon-white.svg) no-repeat center center / contain;
+    transition: all 0.3s ease;
+  }
+}
+
+.p-top-case__company {
+  color: $white;
+  font-size: rm(16);
+  font-weight: 700;
+  margin-block-start: rm(16);
+}
+
+.p-top-case__category {
+  color: $white;
+  font-size: rm(14);
+  font-weight: 700;
+  border: 1px solid $white;
+  padding: rm(5) rm(15);
+  margin-block-start: rm(12);
+}
+
