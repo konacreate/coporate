@@ -46,6 +46,13 @@ button {
   background: transparent;
   background: none;
   border: none;
+  transition: 0.3s;
+
+  @media(any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 input,
