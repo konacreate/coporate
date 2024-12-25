@@ -1,0 +1,38 @@
+@use "../../global" as *;
+
+.c-heading-top {
+  display: flex;
+  justify-content: space-between;
+  height: rm(155);
+  align-items: center;
+}
+
+.c-heading-top__title {
+  @include font(24, 700, 35, );
+  color: $color-main;
+  position: relative;
+  translate: 0 rm(60);
+
+  &::before {
+    position: absolute;
+    @include font(100, 500, 120, );
+    left: 0;
+    bottom: 100%;
+    font-family: $ff-en;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  &.--about {
+    &::before {
+      content: 'ABOUT US';
+    }
+  }
+
+  &.--service {
+    &::before {
+      content: 'SERVICE';
+    }
+  }
+
+}

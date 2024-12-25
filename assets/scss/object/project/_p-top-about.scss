@@ -45,7 +45,7 @@
   position: absolute;
   top: rm(150);
   left: 0;
-  z-index: -2;
+  z-index: -3;
 
   @include mq(sp) {
     top: rm(45);
