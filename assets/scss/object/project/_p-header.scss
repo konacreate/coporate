@@ -4,48 +4,49 @@
 .p-header {
   width: 100%;
   height: auto;
-  padding: rm(16);
   background: $white;
-
-  @include mq(lg) {
-    padding: rm(12) rm(20) rm(13);
-  }
+  overflow: hidden;
 }
 .p-header__inner {
   display: grid;
   align-items: center;
-  grid-template-columns: rm(282) 1fr;
+  grid-template-columns: rm(284) 1fr;
+  padding: rm(16);
 
-  @include mq(lg) {
+  @include mq(sp) {
     grid-template-columns: rm(200) 1fr;
+    padding: rm(14) rm(20) rm(13);
   }
 }
 .p-header__logo {
-  color: $hover-color;
+  color: $color-main;
   font-family: $ff-sub;
   font-size: rm(40);
   font-weight: 700;
+  line-height: calc(47 / 40);
   text-transform: capitalize;
 
-  @include mq(lg) {
+  @include mq(sp) {
     font-size: rm(28);
     letter-spacing: 0.005em;
+    line-height: calc(33 / 28);
   }
 }
 .p-header__nav {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  column-gap: rm(32);
-  //lgの場合非表示
   @include mq(lg) {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: rm(32);
   }
+  //spの場合非表示
+  display: none;
 }
 .p-header__list {
   display: flex;
   align-items: center;
   column-gap: rm(46);
+  translate: 0 rm(3);
 
   li {
     &:not(:first-child) {
@@ -53,7 +54,7 @@
       &::before {
         content: '';
         position: absolute;
-        width: rm(20);
+        width: rm(18);
         height: 1px;
         rotate: 135deg;
         top: 50%;
@@ -66,6 +67,13 @@
 
   li a {
     @include font(14, 500, 24, );
+    transition: opacity 0.3s ease;
+
+    @media(any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
 

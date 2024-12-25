@@ -103,3 +103,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// swiper
+const swiperMV = new Swiper('.js-mv-swiper', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: "auto", /* autoにすることでレスポンシブに応じてサイズを変えずに枚数を可変 */
+  // spaceBetween: 10,
+  speed: 2000,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
+
+// ページが読み込まれたときにスライドを複製する
+window.addEventListener("load", function () {
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+  // 現在のすべてのスライドを取得
+  const slides = document.querySelectorAll(".swiper-slide");
+
+  // 複製の際に必要な数を計算
+  const slideCount = slides.length;
+
+  // 複製処理
+  for (let i = 0; i < slideCount; i++) {
+    const clonedSlide = slides[i].cloneNode(true); // スライドを複製
+    swiperWrapper.appendChild(clonedSlide); // swiper-wrapperに追加
+  }
+
+  // Swiperを更新して新しいスライドを反映
+ swiperMV.update();
+});
