@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.l-top__case {
+  margin-block: rm(104) 0;
+
+  @include mq(sp) {
+    margin-block: rm(60) 0;
+  }
+}
+
+.l-top__news {
+  padding-block: rm(165) rm(160);
+
+  @include mq(sp) {
+    padding-block: rm(125) rm(203);
+  }
+}

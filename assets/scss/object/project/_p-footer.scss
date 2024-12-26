@@ -1,2 +1,120 @@
 @use "../../global" as *;
 
+.p-footer {
+  position: relative;
+}
+
+.p-footer__contact-wrapper {
+  display: flex;
+
+  @include mq(sp) {
+    flex-direction: column;
+  }
+}
+
+.p-footer__download,
+.p-footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: vw(55) vw(49);
+  width: 100%;
+
+  @include mq(sp) {
+    padding-block: rm(46) rm(25);
+  }
+}
+
+.p-footer__download {
+  background: url(../img/footer-download.jpg) no-repeat center center / cover;
+
+  @include mq(sp) {
+    background-image: url(../img/sp/footer-download-sp.jpg);
+  }
+}
+
+.p-footer__contact {
+  background: url(../img/footer-contact.jpg) no-repeat center center / cover;
+
+  @include mq(sp) {
+    background-image: url(../img/sp/footer-contact-sp.jpg);
+
+  }
+}
+
+.p-footer__heading--sub {
+  @include font(60, 500, 72, );
+  font-family: $ff-en;
+  color: $white;
+  text-transform: uppercase;
+
+  @include mq(sp) {
+    font-size: rm(40);
+  }
+}
+
+.p-footer__heading--main {
+  @include font(16, 700, 23, );
+  color: $white;
+
+  @include mq(sp) {
+    margin-block-start: rm(6);
+  }
+}
+
+.p-footer__link {
+  padding: vw(31) vw(98) vw(32) vw(100);
+  margin-block-start: vw(40);
+
+  @include mq(sp) {
+    padding: rm(26) rm(108) rm(26) rm(107);
+    margin-block-start: rm(40);
+  }
+}
+
+
+.p-footer__bottom {
+  padding-block: vw(120) vw(17);
+  background: $color-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(sp) {
+    padding-block: rm(70) rm(13);
+  }
+}
+
+.p-footer__logo {
+  color: $white;
+  font-family: $ff-sub;
+  @include font(52, 700, 61, );
+  text-transform: capitalize;
+
+  @include mq(sp) {
+    font-size: rm(40);
+  }
+}
+
+.p-footer__address {
+  @include font(14, 500, 24, );
+  color: $white;
+  font-style: normal;
+  margin-block-start: vw(22);
+}
+
+.p-footer__copyright {
+  margin-block-start: vw(76);
+
+  @include mq(sp) {
+    margin-block-start: rm(38);
+  }
+  small {
+    color: $white;
+    @include font(14, 500, 24, );
+
+    @include mq(sp) {
+      font-size: rm(12);
+    }
+  }
+}

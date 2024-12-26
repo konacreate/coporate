@@ -137,3 +137,16 @@ window.addEventListener("load", function () {
   // Swiperを更新して新しいスライドを反映
  swiperMV.update();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let toTopButton = document.querySelector(".c-to-top");
+
+  // To Topボタンがクリックされたときにページの先頭にスクロールする
+  toTopButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+

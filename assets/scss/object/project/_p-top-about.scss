@@ -59,8 +59,7 @@
 }
 
 
-.p-top-about__link {
-
+.p-top-about__link--pc {
 }
 
 .p-top-about__bg {
@@ -68,9 +67,11 @@
   top: vw(150);
   left: 0;
   z-index: -2;
+  height: rm(800);
 
   @include mq(sp) {
     top: rm(107);
+    height: rm(854);
   }
 }
 

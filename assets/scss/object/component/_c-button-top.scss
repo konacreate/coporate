@@ -33,6 +33,9 @@
     &.--black {
       color: $color-text;
     }
+    &.--blue {
+      color: $color-main;
+    }
   }
 
   .c-button-top__arrow {
@@ -41,8 +44,8 @@
     width: rm(95);
     height: rm(2);
     background: $white;
-    left: calc(100% + rm(18));
-    top: calc(50% + rm(3));
+    left: calc(100% + rm(19));
+    top: calc(50% + rm(5));
     translate: 0 -50%;
     transition: width 0.5s ease;
 
@@ -56,7 +59,7 @@
       position: absolute;
       top: calc(50% - rm(5));
       translate: 0 -50%;
-      rotate: 45deg;
+      rotate: 35deg;
       left: calc(100% - rm(14));
       background: $white;
       transition: left 0.5s ease;
@@ -69,12 +72,18 @@
       }
       }
 
-
       &.--black {
         background: $color-text;
 
         &::before {
           background: $color-text;
+        }
+      }
+      &.--blue {
+        background: $color-main;
+
+        &::before {
+          background: $color-main;
         }
       }
     }

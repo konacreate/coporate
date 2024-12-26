@@ -1,19 +1,26 @@
 @use "../../global" as *;
 
 .p-top-service {
-  padding-block: rm(119);
   position: relative;
+
 }
 
 .p-top-service__cards {
   display: flex;
   justify-content: space-between;
   column-gap: rm(70);
+  margin-block-start: rm(87);
+
+  @include mq(sp) {
+    flex-direction: column;
+    column-gap: 0;
+    margin-block-start: rm(67);
+  }
 }
 
 .p-top__service__card {
   position: relative;
-  margin-block-start: rm(87);
+
 
   &:nth-child(2) {
     translate: 0 rm(60);
@@ -21,6 +28,21 @@
 
   &:nth-child(3) {
     translate: 0 rm(120);
+  }
+
+  @include mq(sp) {
+    margin-inline-start: rm(15);
+    &:nth-child(2),
+    &:nth-child(3) {
+      translate: 0;
+    }
+
+    &:nth-child(2) {
+      margin-block-start: rm(73);
+    }
+    &:nth-child(3) {
+      margin-block-start: rm(74);
+    }
   }
 
 }
@@ -31,7 +53,7 @@
   @include font(100, 500, 120, );
   font-family: $ff-en;
   right: 0;
-  top: rm(-50);
+  top: rm(-52);
   z-index: 2;
 
   &::after {
@@ -60,10 +82,15 @@
   }
 }
 
-.p-top__service__img {
+.p-top-service__img {
   width: rm(320);
   height: rm(427);
   position: relative;
+
+  @include mq(sp) {
+    width: 100%;
+    height: auto;
+  }
 
   img {
     width: 100%;
@@ -76,12 +103,18 @@
   bottom: rm(33);
   left: rm(-32);
 
+  @include mq(sp) {
+    left: rm(-15);
+  }
+
 
   span {
     @include font(28, 700, 41, );
     background: $white;
     color: $color-main;
     width: fit-content;
+    white-space: nowrap;
+    display: block;
 
     &:not(:first-child) {
       margin-block-start: rm(8);
@@ -98,11 +131,26 @@
   @include font(14, 500, 24, );
 }
 
+.p-top-service__link--sp {
+  margin-block-start: rm(40);
+  display: block;
+  width: fit-content;
+  margin-inline-start: auto;
+
+  @include mq(sp) {
+    margin-block-start: rm(34);
+  }
+}
+
 .p-top-service__bg {
   position: absolute;
   top: calc(50% - rm(4));
   left: 0;
   z-index: -1;
+  height: rm(800);
+
+  @include mq(sp) {
+    top: calc(50% - rm(108));
+    height: rm(1253);
+  }
 }
-
-

@@ -33,7 +33,7 @@
     white-space: nowrap;
 
     @include mq(sp) {
-      bottom: calc(100% + rm(3));
+      bottom: calc(100%);
       @include font(52, 500, 62, );
     }
   }
@@ -48,6 +48,21 @@
     &::before {
       content: 'SERVICE';
     }
+  }
+
+  &.--case {
+    &::before {
+      content: 'CASE STUDY';
+    }
+  }
+  &.--news {
+    &::before {
+      content: 'CASE STUDY';
+    }
+  }
+
+  &.--white {
+    color: $white;
   }
 
 }

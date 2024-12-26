@@ -1,8 +1,32 @@
 @use "../../global" as *;
 
-.p-top-case__card {
+.p-top-case {
+  background: url(../img/case-bg-pc.png) no-repeat center center / cover;
+  padding-block: rm(100) rm(122);
+
+  @include mq(sp) {
+    background: url(../img/sp/case-bg-sp.png) no-repeat center center / cover;
+    padding-block: rm(124) rm(63);
+  }
+}
+
+.p-top-case__cards {
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block-start: rm(80);
+  row-gap: rm(70);
+  column-gap: rm(70);
+
+  @include mq(sp) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-block-start: rm(40);
+    column-gap: 0;
+    row-gap: rm(52);
+  }
+}
+
+.p-top-case__card {
+ 
 
   @media(any-hover: hover) {
     &:hover {
@@ -15,9 +39,9 @@
 }
 
 .p-top-case__img {
-  width: rm(320);
-  height: rm(240);
+  width: 100%;
   background: $white;
+
 
   img {
     width: 100%;
@@ -45,6 +69,10 @@
   font-size: rm(16);
   font-weight: 700;
   margin-block-start: rm(16);
+
+  @include mq(sp) {
+    margin-block-start: rm(14);
+  }
 }
 
 .p-top-case__category {
@@ -54,5 +82,17 @@
   border: 1px solid $white;
   padding: rm(5) rm(15);
   margin-block-start: rm(12);
+  width: fit-content;
+  line-height: calc(20 / 14);
+
+  @include mq(sp) {
+    margin-block-start: rm(11);
+  }
 }
 
+.p-top-case__link--sp {
+  margin-block-start: rm(52);
+  width: fit-content;
+  display: block;
+  margin-inline-start: auto;
+}
