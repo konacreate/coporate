@@ -78,7 +78,7 @@
   line-height: calc(29 / 20);
 
   @include mq(sp) {
-    margin-block-start: vw-sp(8);
+    margin-block-start: vw-sp(17);
     font-size: vw-sp(16);
   }
 }

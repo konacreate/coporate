@@ -5,4 +5,9 @@
   background: #EDF3F8;
   width: 100%;
   height: rm(800);
+
+  @include mq(sp) {
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
+    height: rm(854);
+  }
 }

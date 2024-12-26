@@ -5,6 +5,11 @@
   justify-content: space-between;
   height: rm(155);
   align-items: center;
+
+  @include mq(sp) {
+    height: auto;
+    display: block;
+  }
 }
 
 .c-heading-top__title {
@@ -12,6 +17,11 @@
   color: $color-main;
   position: relative;
   translate: 0 rm(60);
+
+  @include mq(sp) {
+    @include font(16, 700, 23, );
+    translate: 0;
+  }
 
   &::before {
     position: absolute;
@@ -21,6 +31,11 @@
     font-family: $ff-en;
     font-style: italic;
     white-space: nowrap;
+
+    @include mq(sp) {
+      bottom: calc(100% + rm(3));
+      @include font(52, 500, 62, );
+    }
   }
 
   &.--about {

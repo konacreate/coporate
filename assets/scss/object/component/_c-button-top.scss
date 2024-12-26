@@ -26,6 +26,10 @@
     color: $white;
     position: relative;
 
+    @include mq(sp) {
+      font-size: rm(20);
+    }
+
     &.--black {
       color: $color-text;
     }
@@ -90,6 +94,7 @@
       height: rm(40);
       border-width: 2px;
       left: calc(100% + rm(57));
+      top: calc(50% - rm(2));
     }
 
     &.--fill {
