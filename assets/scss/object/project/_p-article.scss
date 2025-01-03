@@ -1,0 +1,150 @@
+@use "../../global" as *;
+
+.p-article {
+  background: url(../img/news-top-pc.jpg) no-repeat center center / cover;
+
+  @include mq(sp) {
+    background: url(../img/sp/news-top-sp.jpg) no-repeat center center / cover;
+  }
+}
+
+.p-article__inner {
+  display: flex;
+  column-gap: rm(40);
+
+  @include mq(sp) {
+    flex-direction: column;
+    row-gap: rm(100);
+  }
+}
+
+.p-article__content {
+  max-width: 760px;
+  width: 100%;
+}
+
+.p-article__title {
+  margin-block-start: rm(22);
+  @include font(24, 700, 32, );
+
+  @include mq(sp) {
+    font-size: rm(20);
+    margin-block-start: 0;
+  }
+}
+
+.p-article__img {
+  margin-block-start: rm(41);
+
+  @include mq(sp) {
+    margin-block-start: rm(24);
+  }
+}
+
+.p-article__body {
+  margin-block-start: rm(47);
+
+  h2 {
+    @include font(20, 700, 29, );
+    padding-inline-start: rm(20);
+    color: $color-main;
+    border-inline-start: 6px solid $color-main;
+    background: #F8F8F8;
+  }
+
+  h2 + p,
+  h3 + p {
+    @include font(14, 500, 24, );
+    margin-block-start: rm(18);
+
+    @include mq(sp) {
+      margin-block-start: rm(18);
+    }
+  }
+
+  h3 {
+    margin-block-start: rm(38);
+    @include font(18, 700, 26, );
+    border-block-end: 1px solid $color-main;
+    padding-block-end: rm(6);
+
+    @include mq(sp) {
+      padding-block-end: 0;
+      margin-block-start: rm(32);
+    }
+  }
+
+  h4 {
+    margin-block-start: rm(39);
+    @include font(16, 700, 23, );
+
+    margin-block-start: rm(32);
+  }
+
+  h4 + p {
+    margin-block-start: rm(14);
+
+    @include mq(sp) {
+      margin-block-start: rm(7);
+    }
+  }
+
+  ul {
+    padding-inline: rm(54);
+    margin-block-start: rm(38);
+    display: flex;
+    flex-direction: column;
+    row-gap: rm(16);
+
+    @include mq(sp) {
+      margin-block-start: rm(32);
+      padding-inline: 0;
+      row-gap: rm(20);
+    }
+
+    li {
+      @include font(14, 500, 20, );
+      position: relative;
+
+      &::before {
+        content: '・';
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        left: rm(-14);
+      }
+    }
+  }
+
+  blockquote {
+    margin: rm(40) rm(74) 0 rm(40);
+    border-inline-start: 4px solid $color-main;
+    padding: rm(33) rm(35) rm(33) rm(31);
+    background: #F8F8F8;
+    position: relative;
+
+    @include mq(sp) {
+      margin: rm(57) 0 0 0;
+      padding: rm(30) rm(32) rm(23) rm(28);
+    }
+
+    &::before {
+      content: '“';
+      position: absolute;
+      font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+      left: 0;
+      top: 50%;
+      translate: 0 -50%;;
+      @include font(163, 700, 261, );
+      color: #E8E8E8;
+      z-index: 1;
+      ;
+    }
+    p {
+      position: relative;
+      z-index: 2;
+      @include font(14, 500, 24, );
+    }
+  }
+}
+

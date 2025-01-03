@@ -1,0 +1,224 @@
+@use "../../global" as *;
+
+.p-download-form {
+  max-width: 550px;
+  width: 100%;
+  border-radius: rm(12);
+  background: #EDF3F8;
+  padding: rm(40);
+
+  @include mq(sp) {
+    padding: rm(40) rm(20);
+    margin-inline: auto;
+  }
+}
+
+.p-download-form__heading {
+  @include font(32, 700, 46, );
+
+  @include mq(sp) {
+    font-size: rm(24);
+  }
+}
+
+.p-download-form__field-boxes {
+  margin-block-start: rm(40);
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(32);
+
+  @include mq(sp) {
+    row-gap: rm(20);
+  }
+}
+
+.p-download-form__field-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(13);
+
+  @include mq(sp) {
+    row-gap: rm(8);
+  }
+}
+
+.p-download-form__head {
+  display: flex;
+  column-gap: rm(9);
+  align-items: center;
+
+  @include mq(sp) {
+    column-gap: rm(8);
+  }
+}
+
+.p-download-form__label {
+  @include font(18, 700, 26, );
+
+  @include mq(sp) {
+    font-size: rm(14);
+  }
+}
+
+.p-download-form__text {
+  padding: rm(9) rm(15) rm(10);
+  border-radius: rm(5);
+  border: 1px solid #DDD;
+  background: $white;
+  @include font(16, 500, 23, );
+  width: 100%;
+
+  @include mq(sp) {
+    font-size: rm(14);
+    padding: rm(11) rm(13);
+  }
+
+  &::placeholder {
+    color: #ccc;
+  }
+}
+
+.p-download-form__tag {
+  @include font(12, 700, 17, );
+  color: $white;
+  padding: rm(1) rm(8) rm(2);
+  background: $accent-color-red;
+  display: block;
+
+  @include mq(sp) {
+    font-size: rm(10);
+  }
+}
+
+.p-download-form__checkbox {
+  margin-block-start: rm(40);
+  text-align: center;
+
+  span {
+    margin: 0;
+  }
+}
+
+.p-download-form__checkbox-input {
+  appearance: unset;
+  width: rm(32);
+  height: rm(32);
+  border: 1px solid #3E3E3E;
+  background: $white;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+
+  @include mq(sp) {
+    width: rm(28);
+    height: rm(28);
+  }
+
+  &:checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-inline-start: 1px solid #3E3E3E;
+    border-block-end: 1px solid #3E3E3E;
+    rotate: -45deg;
+    width: rm(14);
+    height: rm(8);
+    top: calc(50% - rm(2));
+    translate: 0 -50%;
+    left: rm(9);
+    opacity: 0;
+
+    @include mq(sp) {
+      left: rm(6);
+    }
+  }
+}
+
+.p-download-form__checkbox-text {
+  @include font(16, 700, 24, );
+
+  @include mq(sp) {
+    font-size: rm(14);
+    font-weight: 500;
+  }
+}
+
+.p-download-form__checkbox-link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  margin-inline: rm(10);
+  font-weight: 700;
+
+  @include mq(sp) {
+    @include font(14, 700, 20, );
+    margin-inline: rm(10) rm(6);
+  }
+}
+
+.p-download-form__button {
+  margin-block-start: rm(40);
+  text-align: center;
+
+  .wpcf7-spinner {
+    display: none;
+  }
+}
+
+.p-download-form__submit {
+  @include font(16, 500, 23, );
+  padding: rm(23) rm(79) rm(24);
+
+  @include mq(sp) {
+    font-size: rm(14);
+    padding: rm(25) rm(69) rm(25) rm(70);
+  }
+}
+
+.p-download-form__thanks-message {
+  @include font(14, 500, 19, );
+  margin-block-start: rm(40);
+
+  @include mq(sp) {
+    line-height: 1.7;
+  }
+}
+
+.p-download-form__thanks-button {
+  margin-block-start: rm(15);
+  display: flex;
+  column-gap: rm(8);
+  @include font(14, 500, 24, );
+
+  @include mq(sp) {
+    margin-block-start: rm(12);
+  }
+
+  a {
+    color: $color-main;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+}
+
+.p-download-form__thanks-text {
+  @include font(14, 500, 28, );
+  margin-block-start: rm(36);
+
+  @include mq(sp) {
+    margin-block-start: rm(35);
+  }
+}
+

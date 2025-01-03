@@ -52,8 +52,8 @@
   <!-- 当社について -->
   <section class="p-top-about">
     <div class="l-inner p-top-about__inner">
-      <div class="c-heading-top">
-        <h2 class="c-heading-top__title --about">当社について</h2>
+      <div class="c-heading">
+        <h2 class="c-heading__title --about">当社について</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
           <span class="c-button-top__text">
             View more
@@ -88,8 +88,8 @@
   <!-- サービス -->
   <section class="l-top-service p-top-service">
     <div class="l-inner">
-      <div class="c-heading-top">
-        <h2 class="c-heading-top__title --service">サービス</h2>
+      <div class="c-heading">
+        <h2 class="c-heading__title --service">サービス</h2>
         <a href="" class="c-button-top u-pc">
           <span class="c-button-top__text --black">
             View more
@@ -157,8 +157,8 @@
   <!-- 導入事例 -->
   <section class="l-top__case p-top-case">
     <div class="l-inner">
-      <div class="c-heading-top">
-        <h2 class="c-heading-top__title --case --white">導入事例</h2>
+      <div class="c-heading">
+        <h2 class="c-heading__title --case --white">導入事例</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
           <span class="c-button-top__text">
             View more
@@ -167,7 +167,7 @@
           </span>
         </a>
       </div>
-      <!-- /c-heading-top -->
+      <!-- /c-heading -->
       <div class="p-top-case__cards">
         <a href="" class="p-top-case__card">
           <div class="p-top-case__img">
@@ -243,8 +243,8 @@
   <!-- 新着情報 -->
   <section class="l-top__news p-top-news">
     <div class="l-inner">
-      <div class="c-heading-top">
-        <h2 class="c-heading-top__title --news">新着情報</h2>
+      <div class="c-heading">
+        <h2 class="c-heading__title --news">新着情報</h2>
         <a href="" class="c-button-top u-pc">
           <span class="c-button-top__text --black">
             View more
@@ -254,36 +254,32 @@
         </a>
       </div>
       <div class="p-top-news__boxes">
-        <a class="p-top-news__box">
+      <?php $recent_query = new WP_Query(
+            array (
+              'post_type' => 'post',
+              'posts_per_page' => 3,
+              'orderby' => 'date',
+              'order' => 'DESC',
+            )
+          );
+          ?>
+          <?php if($recent_query->have_posts()) : ?>
+            <?php while($recent_query->have_posts()) : ?>
+              <?php $recent_query->the_post(); ?>
+        <a href="<?php the_permalink(); ?>" class="p-top-news__box">
           <div class="p-top-news__meta">
+          <?php $category = get_the_category(); ?><?php if ($category[0]) : ?>
             <p class="p-top-news__category">
-              営業時間
+            <?php echo $category[0]->cat_name; ?>
             </p>
-            <time datetime="" class="p-top-news__time">2021.07.20</time>
+            <?php endif; ?>
+            <time datetime="<?php the_time('c'); ?>" class="p-top-news__time"><?php the_time('Y.m.d'); ?></time>
           </div>
-          <h3 class="p-top-news__title">お盆期間中の営業について</h3>
+          <h3 class="p-top-news__title"><?php the_title(); ?></h3>
         </a>
         <!-- /p-top-news__box -->
-        <a class="p-top-news__box">
-          <div class="p-top-news__meta">
-            <p class="p-top-news__category">
-              その他
-            </p>
-            <time datetime="" class="p-top-news__time">2021.06.01</time>
-          </div>
-          <h3 class="p-top-news__title">新型コロナウイルス対策ご協力のお願い</h3>
-        </a>
-        <!-- /p-top-news__box -->
-        <a class="p-top-news__box">
-          <div class="p-top-news__meta">
-            <p class="p-top-news__category">
-              その他
-            </p>
-            <time datetime="" class="p-top-news__time">2021.05.01</time>
-          </div>
-          <h3 class="p-top-news__title">オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について</h3>
-        </a>
-        <!-- /p-top-news__box -->
+         <?php endwhile; ?>
+         <?php endif; ?>
       </div>
       <!-- /p-top-news__boxes -->
       <a href="" class="p-top-news__link--sp c-button-top u-sp">

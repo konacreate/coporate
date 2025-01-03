@@ -15,7 +15,7 @@
 <div class="l-low__contents">
   <div class="l-inner p-news__inner">
     <div class="p-news__contents">
-      <div class="p-news__cat-name">ニュース</div>
+      <div class="p-news__cat-name"><?php single_cat_title(); ?></div>
       <div class="p-news__articles">
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : ?>

@@ -15,6 +15,11 @@
     width: vw(365.654);
     height: 100%;
     z-index: 3;
+
+    @include mq(sp) {
+      background-image: url(../img/sp/top-decoration-sp.svg);
+      width: rm(165.654);
+    }
   }
 
   &::after {
@@ -27,4 +32,12 @@
     top: 0;
     left: 0;
   };
+}
+
+.l-low__contents {
+  padding-block: rm(80) rm(160);
+
+  @include mq(sp) {
+    padding-block: rm(60) rm(100);
+  }
 }

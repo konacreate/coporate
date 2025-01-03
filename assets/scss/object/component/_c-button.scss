@@ -2,25 +2,25 @@
 
 .c-button {
   border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .c-button__primary {
-  border-color: $hover-color;
+  border-color: $color-main;
   background: $white;
   text-align: center;
-  transition: all 0.3s ease;
-  color: $hover-color;
+  color: $color-main;
 
   @media(any-hover: hover) {
     &:hover {
-      background: $hover-color;
+      background: $color-main;
       color: $white;
     }
   }
 }
 
 .c-button__secondary {
-  background: $hover-color;
+  background: $color-main;
   color: $white;
   text-align: center;
   transition: all 0.3s ease;
@@ -35,4 +35,54 @@
   color: $yellow;
   border: 3px solid $yellow;
   transition: all 0.3s ease;
+}
+
+.c-button__quaternary {
+  border-color: $color-main;
+  background: $white;
+  padding: rm(calc(24 - 1)) rm(calc(80 - 1)) rm(calc(24 - 1)) rm(calc(80 - 1));
+  position: relative;
+
+
+  @include mq(sp) {
+    font-size: rm(14);
+    width: rm(295);
+    height: rm(72);
+    padding-inline: 0;
+  }
+
+  .c-button__text,
+  .c-button__arrow {
+    @include font(16, 500, 24, );
+    color: $color-main;
+    transition: all 0.3s ease;
+  }
+
+  .c-button__arrow {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    right: rm(20);
+
+    @include mq(sp) {
+      right: rm(11);
+      left: auto;
+    }
+  }
+
+
+  @media(any-hover: hover) {
+    &:hover {
+      background: $color-main;
+
+      .c-button__text,
+      .c-button__arrow {
+        color: $white;
+      }
+
+      .c-button__arrow {
+        right: rm(12);
+      }
+    }
+  }
 }

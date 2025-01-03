@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.c-heading-top {
+.c-heading {
   display: flex;
   justify-content: space-between;
   height: rm(155);
@@ -12,7 +12,7 @@
   }
 }
 
-.c-heading-top__title {
+.c-heading__title {
   @include font(24, 700, 35, );
   color: $color-main;
   position: relative;
@@ -58,6 +58,19 @@
   &.--news {
     &::before {
       content: 'NEWS';
+    }
+  }
+
+
+  &.--mission {
+    &::before {
+      content: 'MISSION';
+    }
+  }
+
+  &.--vision {
+    &::before {
+      content: 'VISION';
     }
   }
 

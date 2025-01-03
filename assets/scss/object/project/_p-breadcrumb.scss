@@ -6,6 +6,15 @@
   max-width: 1100px;
   padding-inline: vw(40);
 
+  .p-breadcrumb__symbol {
+    margin-inline: rm(8);
+  }
+
+
+  span {
+    @include font(12, 500, 17, );
+  }
+
   .home {
     color: #888;
   }

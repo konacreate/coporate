@@ -1,0 +1,127 @@
+@use "../../global" as *;
+
+.p-widget {
+  max-width: 300px;
+  flex-shrink: 0;
+
+  @include mq(sp) {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+.p-widget__new {
+
+}
+
+.p-widget__heading {
+  @include font(20, 700, 29, );
+}
+
+.p-widget__articles {
+  margin-block-start: rm(16);
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(16);
+
+  @include mq(sp) {
+    margin-block-start: rm(20);
+    row-gap: rm(20);
+  }
+}
+
+.p-widget__article {
+  display: flex;
+  transition: opacity 0.3s ease;
+
+  @media(any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-widget__img {
+  width: rm(100);
+  flex-shrink: 0;
+
+  @include mq(sp) {
+    width: rm(120);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-widget__body {
+  padding: rm(3) 0 rm(3) rm(10);
+
+  @include mq(sp) {
+    padding: 0 0 0 rm(12);
+  }
+}
+
+.p-widget__title {
+  @include font(14, 700, 20, );
+  margin-block-start: rm(8);
+  height: rm(60);
+  -webkit-line-clamp: 3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+  @include mq(sp) {
+    margin-block-start: rm(4);
+  }
+}
+
+.p-widget__category {
+  margin-block-start: rm(80);
+
+  @include mq(sp) {
+    margin-block-start: rm(60);
+  }
+}
+
+.p-widget__heading {
+  @include font(20, 700, 29, );
+}
+
+.p-widget__categories {
+  margin-block-start: rm(16);
+
+  li a {
+    @include font(16, 700, 23, );
+    padding-block: rm(17) rm(16);
+    padding-inline-start: rm(39);
+    position: relative;
+    border-block-end: 1px solid #DDDDDD;
+    display: block;
+    transition: opacity 0.3s ease;
+
+    &:first-child {
+      border-block-start: 1px solid #DDDDDD;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rm(9);
+      height: rm(16);
+      top: 50%;
+      translate: 0 -50%;
+      left: rm(20);
+      background: url(../img/sidebar-icon.svg) no-repeat center center / contain;
+    }
+
+    @media(any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+

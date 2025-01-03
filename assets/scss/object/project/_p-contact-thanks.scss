@@ -1,0 +1,39 @@
+@use "../../global" as *;
+
+.p-contact-thanks {
+  background: url(../img/contact-top.jpg) no-repeat center center / cover;
+
+  @include mq(sp) {
+    background: url(../img/sp/contact-top.jpg) no-repeat center center / cover;
+  }
+}
+
+.p-contact-thanks__content {
+  max-width: 687px;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.p-contact-thanks__text {
+  @include font(14, 500, 24, );
+}
+
+.p-contact-thanks__button {
+  margin-block-start: rm(14);
+  display: flex;
+  column-gap: rm(8);
+
+  span,
+  a {
+    @include font(14, 500, 20, );
+  }
+
+  a {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+}

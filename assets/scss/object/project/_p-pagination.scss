@@ -1,0 +1,77 @@
+@use "../../global" as *;
+
+.p-pagination {
+  margin-block-start: rm(60);
+  display: flex;
+  justify-content: center;
+
+  @include mq(sp) {
+    margin-block-start: rm(40);
+  }
+
+  .page-numbers {
+    color: #888;
+    @include font(16, 500, 23, );
+    background: #F8F8F8;
+    width: rm(50);
+    height: rm(50);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+
+    @include mq(sp) {
+      width: rm(40);
+      height: rm(40);
+    }
+
+    &:not(:first-child) {
+      margin-inline-start: rm(8);
+
+      @include mq(sp) {
+        margin-inline-start: rm(6);
+      }
+    }
+
+    &.current {
+      background: $color-main;
+      color: $white;
+    }
+
+
+    &.prev {
+    margin-inline-end: rm(20);
+
+    @include mq(sp) {
+      margin-inline-end: rm(6);
+    }
+    }
+
+    &.next {
+    margin-inline-start: rm(20);
+
+    @include mq(sp) {
+      margin-inline-start: rm(6);
+    }
+    }
+
+    @media(any-hover: hover) {
+      &:hover {
+        background: $color-main;
+        color: $white;
+      }
+    }
+  }
+
+
+  svg{
+    width: rm(9.424);
+    height: rm(16.026);
+
+    @include mq(sp) {
+      width: rm(7.481);
+      height: rm(12.722);
+    }
+  }
+
+
+}

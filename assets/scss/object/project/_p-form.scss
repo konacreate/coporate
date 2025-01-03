@@ -1,0 +1,203 @@
+@use "../../global" as *;
+
+.p-form {
+  margin-block-start: rm(60);
+
+  @include mq(sp) {
+    margin-block-start: rm(40);
+  }
+}
+
+.p-form__field-boxes {
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(32);
+  margin-block-end: rm(40);
+
+  @include mq(sp) {
+    row-gap: rm(20);
+  }
+}
+
+.p-form__field-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: rm(12);
+
+  @include mq(sp) {
+    row-gap: rm(8);
+  }
+}
+
+.p-form__head {
+  display: flex;
+  column-gap: rm(12);
+  align-items: center;
+}
+
+.p-form__label {
+  @include font(18, 700, 26, );
+
+  @include mq(sp) {
+    @include font(14, 700, 20, );
+  }
+}
+
+.p-form__tag {
+  @include font(12, 700, 17, );
+  color: $white;
+  background: $accent-color-red;
+  padding: rm(1) rm(8) rm(2);
+
+  @include mq(sp) {
+    padding: rm(2) rm(8);
+  }
+}
+
+.p-form__text,
+.p-form__textarea {
+  padding: rm(9) rm(15) rm(10);
+  @include font(16, 500, 23, );
+  border: 1px solid #ddd;
+  background: $white;
+  border-radius: rm(4);
+  width: 100%;
+  color: $color-text;
+
+  @include mq(sp) {
+    @include font(14, 500, 20, );
+    padding: rm(11) rm(15);
+  }
+
+  &::placeholder {
+    color: #ccc;
+  }
+}
+
+.p-form__select-wrapper {
+ width: 100%;
+ position: relative;
+
+ &::before {
+   content: '';
+   position: absolute;
+   background: url(../img/select-arrow.svg) no-repeat center center / contain;
+   width: rm(11);
+   height: rm(7);
+   top: 50%;
+   translate: 0 -50%;
+   right: rm(16);
+
+   @include mq(sp) {
+    right: rm(14);
+   }
+ }
+
+ span {
+  width: 100%;
+ }
+}
+
+.p-form__select {
+  padding: rm(9) rm(15) rm(10);
+  @include font(16, 500, 23, );
+  border-radius: rm(4);
+  border-color: #ddd;
+  color: $color-text;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+
+  &.js-empty {
+    color: #ccc;
+  }
+}
+
+.p-form__textarea {
+  resize: vertical;
+  height: rm(240);
+}
+
+.p-form__checkbox {
+  text-align: center;
+}
+
+.p-form__checkbox-input {
+  appearance: unset;
+  width: rm(32);
+  height: rm(32);
+  border: 1px solid $color-text;
+  position: relative;
+  margin: 0;
+  vertical-align: middle;
+  @include font(16, 500, 23, );
+
+  @include mq(sp) {
+    width: rm(28);
+    height: rm(28);
+    font-size: rm(14);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(../img/check.svg) no-repeat center center / contain;
+    width: rm(16);
+    height: rm(10);
+    top: 50%;
+    translate: 0 -50%;
+    left: 50%;
+    translate: -50%;
+    opacity: 0;
+    margin-block-start: rm(-2);
+  }
+  &:checked {
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+
+.p-form__checkbox-link {
+  margin-inline: rm(10);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+  font-weight: 700;
+
+  @include mq(sp) {
+    margin-inline: rm(10) rm(6);
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-form__button {
+  margin-block-start: rm(46);
+  text-align: center;
+
+  @include mq(sp) {
+    margin-block-start: rm(40);
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+}
+
+.p-form__submit {
+  @include font(16, 500, 24, );
+  padding: rm(23) rm(79);
+
+  @include mq(sp) {
+    font-size: rm(14);
+    width: rm(295);
+    height: rm(72);
+    padding-block: rm(25);
+  }
+}

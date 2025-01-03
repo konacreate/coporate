@@ -1,22 +1,3 @@
-/**
-* 最大幅に基づいてviewport設定を切り替える関数。
-* @function
-* @param {number} maxWidth - viewportを固定する際の最大幅
-*/
-const switchViewport = (maxWidth) => {
-  const viewport = document.querySelector('meta[name="viewport"]');
-  const value =
-    window.outerWidth > maxWidth
-      ? "width=device-width,initial-scale=1"
-      : `width=${maxWidth}`;
-  if (viewport.getAttribute("content") !== value) {
-    viewport.setAttribute("content", value);
-  }
-};
-addEventListener("resize", () => switchViewport(375));
-switchViewport(375);
-
-
 
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const drawer = document.querySelector('.p-drawer');
   const drawerNavItem = document.querySelectorAll('.p-drawer__body a[href^="#"]');
   const headerHeight = document.querySelector('.p-header').offsetHeight;
+  const header = document.querySelector('.p-header');
   const breakpoint = 768;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
@@ -34,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!drawer.classList.contains("js-show")) {
       drawer.classList.add("js-show");
       drawerIcon.classList.add("js-show");
+      header.classList.add("js-fixed");
     }
   }
 
@@ -42,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (drawer.classList.contains("js-show")) {
       drawer.classList.remove("js-show");
       drawerIcon.classList.remove("js-show");
+      header.classList.remove("js-fixed");
       isMenuOpen = false;
     }
   }
@@ -122,8 +106,14 @@ const swiperMV = new Swiper('.js-mv-swiper', {
 window.addEventListener("load", function () {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
 
+  // swiper-wrapperが存在するか確認
+  if (!swiperWrapper) return;
+
   // 現在のすべてのスライドを取得
   const slides = document.querySelectorAll(".swiper-slide");
+
+  // swiper-slideが存在するか確認
+  if (slides.length === 0) return;
 
   // 複製の際に必要な数を計算
   const slideCount = slides.length;
@@ -150,3 +140,82 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  setUpAccordion();
+});
+
+const setUpAccordion = () => {
+  const details = document.querySelectorAll(".js-details");
+  const IS_OPENED_CLASS = "is-opened";
+
+  details.forEach((element) => {
+    const summary = element.querySelector(".js-summary");
+    const content = element.querySelector(".js-content");
+
+    summary.addEventListener("click", (event) => {
+      // デフォルトの挙動を無効化
+      event.preventDefault();
+
+      // is-openedクラスの有無で判定（detailsのopen属性の判定だと、アニメーション完了を待つ必要がありタイミング的に不安定になるため）
+      if (element.classList.contains(IS_OPENED_CLASS)) {
+        // アコーディオンを閉じるときの処理
+        // アイコン操作用クラスを切り替える(クラスを取り除く)
+        element.classList.toggle(IS_OPENED_CLASS);
+
+        // アニメーション実行
+        closingAnim(content, element).restart();
+      } else {
+        // アコーディオンを開くときの処理
+        // アイコン操作用クラスを切り替える(クラスを付与)
+        element.classList.toggle(IS_OPENED_CLASS);
+        // open属性を付与
+        element.setAttribute("open", "true");
+        // アニメーション実行
+        openingAnim(content).restart();
+      }
+    });
+  });
+}
+/**
+ * アコーディオンを閉じる時のアニメーション
+ */
+const closingAnim = (content, element) => gsap.to(content, {
+  height: 0,
+  opacity: 0,
+  duration: 0.4,
+  ease: "power3.out",
+  overwrite: true,
+  onComplete: () => {
+    // アニメーションの完了後にopen属性を取り除く
+    element.removeAttribute("open");
+  },
+});
+
+/**
+ * アコーディオンを開く時のアニメーション
+ */
+const openingAnim = (content) => gsap.fromTo(
+  content,
+  {
+    height: 0,
+    opacity: 0,
+  },
+  {
+    height: "auto",
+    opacity: 1,
+    duration: 0.4,
+    ease: "power3.out",
+    overwrite: true,
+  }
+);
+
+jQuery(function($){
+  const Target = $('.js-empty');
+  $(Target).on('change', function(){
+    if ($(Target).val() !== ""){
+      $(this).removeClass('js-empty');
+    } else {
+      $(this).addClass('js-empty');
+    }
+  });
+});

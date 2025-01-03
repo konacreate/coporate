@@ -17,8 +17,12 @@
 @use "object/component/c-button";
 @use "object/component/c-animated";
 @use "object/component/c-button-top";
-@use "object/component/c-heading-top";
+@use "object/component/c-heading";
 @use "object/component/c-to-top";
+@use "object/component/c-low-title";
+@use "object/component/c-low-heading";
+@use "object/component/c-widget-meta";
+@use "object/component/c-meta";
 
 //Project
 @use "object/project/p-header";
@@ -31,8 +35,20 @@
 @use "object/project/p-top-service";
 @use "object/project/p-bg";
 @use "object/project/p-top-news";
-@use "object/project/p-low";
 @use "object/project/p-breadcrumb";
+@use "object/project/p-about";
+@use "object/project/p-service";
+@use "object/project/p-qa";
+@use "object/project/p-news";
+@use "object/project/p-widget";
+@use "object/project/p-pagination";
+@use "object/project/p-form";
+@use "object/project/p-contact";
+@use "object/project/p-contact-thanks";
+@use "object/project/p-article";
+@use "object/project/p-pagination-single";
+@use "object/project/p-download";
+@use "object/project/p-download-form";
 
 //utility
 @use "object/utility/u-disp";

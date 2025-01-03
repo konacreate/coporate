@@ -48,6 +48,7 @@
 .p-drawer {
   position: fixed;
   top: rm(60);
+  left: 0;
   z-index: $z-drawer;
   overflow-y: scroll;
   width: 100%;
@@ -67,7 +68,7 @@
 
 //ドロワーの出現の動きを指定
 .p-drawer {
-  translate: 101%;
+  translate: 0 -120%;
   transition: translate 0.5s ease;
 
   &.js-show {

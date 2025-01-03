@@ -1,0 +1,69 @@
+@use "../../global" as *;
+
+.c-low-title {
+  @include font(20, 700, 29, );
+  position: relative;
+  background: $white;
+  color: $color-main;
+  z-index: 5;
+  width: fit-content;
+  top: vw(151);
+  left: vw(220);
+
+  @include mq(sp) {
+    top: rm(137);
+    left: rm(20);
+    font-size: rm(16);
+  }
+
+  &::before {
+    position: absolute;
+    @include font(60, 500, 72, );
+    font-family: $ff-en;
+    font-style: italic;
+    bottom: calc(100% +  rm(8));
+    white-space: nowrap;
+    background: $white;
+
+    @include mq(sp) {
+      font-size: rm(32);
+      bottom: calc(100% +  rm(9));
+    }
+  }
+
+  &.--about {
+    &::before {
+      content: 'ABOUT US';
+    }
+  }
+
+  &.--service {
+    &::before {
+      content: 'SERVICE';
+    }
+  }
+
+  &.--news {
+    &::before {
+      content: 'NEWS';
+    }
+  }
+
+  &.--contact {
+    &::before {
+      content: 'CONTACT';
+    }
+  }
+
+  &.--download {
+    &::before {
+      content: 'DOWNLOAD';
+    }
+  }
+
+  &.--case {
+    &::before {
+      content: 'CASE STUDY';
+    }
+  }
+}

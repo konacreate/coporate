@@ -13,7 +13,7 @@
 <body>
   <header class="p-header">
     <div class="p-header__inner">
-      <a href="" class="p-header__logo u-italic">global standard</a>
+      <a href="<?php echo home_url('/'); ?>" class="p-header__logo u-italic">global standard</a>
       <nav class="p-header__nav">
         <ul class="p-header__list">
           <li><a href="">トップ</a></li>
@@ -29,7 +29,6 @@
       </nav>
     </div>
   </header>
-
   <button class="p-drawer__icon">
     <div class="p-drawer__icon--bar"></div>
     <div class="p-drawer__icon--bar"></div>

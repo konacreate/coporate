@@ -1,0 +1,96 @@
+@use "../../global" as *;
+
+.p-qa {
+  margin-block: rm(60) 0;
+
+  @include mq(sp) {
+    margin-block: rm(40) 0;
+  }
+}
+
+.p-qa__details {
+  border-block-end: 1px solid #DDD;
+}
+
+.p-qa__details[open] .p-qa__head-text::before,
+.p-qa__details[open] .p-qa__head-text::after {
+  rotate: 45deg;
+  background: $accent-color-red;
+}
+
+.p-qa__details[open] .p-qa__head-text {
+  color: $accent-color-red;
+}
+
+summary {
+  display: block;
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.p-qa__head {
+  position: relative;
+  padding-block: rm(32) rm(calc(32 - 1));
+
+
+  @include mq(sp) {
+    padding-block: rm(18) rm(15);
+  }
+
+
+
+@media(any-hover: hover) {
+  &:hover {
+    cursor: pointer;
+  }
+}
+}
+
+.p-qa__head-text {
+  @include font(20, 700, 29, );
+  padding-inline: 0 rm(73);
+  position: relative;
+  width: 100%;
+
+  @include mq(sp) {
+    @include font(16, 700, 23, );
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: $color-text;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    width: rm(21);
+    height: rm(2);
+    right: rm(12);
+    top: rm(10);
+  }
+
+  &::after {
+    width: rm(2);
+    height: rm(21);
+    right: rm(22.5);
+    top: 0;
+}
+}
+
+.p-qa__a {
+  padding-inline: rm(40) rm(60);
+  padding-block: 0 rm(30);
+
+  @include mq(sp) {
+    padding-inline: 0;
+    padding-block: rm(3) rm(14);
+  }
+}
+
+.p-qa__a-text {
+  @include font(14, 500, 24, );
+}
+

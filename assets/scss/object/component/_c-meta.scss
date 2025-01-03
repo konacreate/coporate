@@ -1,0 +1,35 @@
+@use "../../global" as *;
+
+
+.c-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-meta__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: rm(12);
+
+  @include mq(sp) {
+    column-gap: rm(8);
+  }
+}
+
+.c-meta__category {
+  @include font(14, 500, 20, );
+  color: $accent-color-red;
+  padding: rm(8) rm(24);
+  border: 1px solid currentColor;
+
+  @include mq(sp) {
+    font-size: rm(12);
+    padding: rm(3) rm(11) rm(4);
+  }
+}
+
+.c-meta__time {
+  @include font(14, 500, 20, );
+  color: #888888;
+}
