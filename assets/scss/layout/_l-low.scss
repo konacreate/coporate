@@ -1,0 +1,30 @@
+@use "../global" as *;
+
+.l-low {
+  width: 100%;
+  height: vw(250);
+  position: relative;
+  @include mq(sp) {
+    height: rm(250);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(../img/top-decoration.svg) no-repeat center center / cover;
+    width: vw(365.654);
+    height: 100%;
+    z-index: 3;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: rgba(26, 26, 26, 0.20);
+    z-index: 2;
+    width: inherit;
+    height: 100%;
+    top: 0;
+    left: 0;
+  };
+}
