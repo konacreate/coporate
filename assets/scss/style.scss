@@ -9,7 +9,6 @@
 @use "layout/l-inner";
 @use "layout/l-footer";
 @use "layout/l-section";
-@use "layout/l-top-service";
 @use "layout/l-top";
 @use "layout/l-low";
 
@@ -49,6 +48,7 @@
 @use "object/project/p-pagination-single";
 @use "object/project/p-download";
 @use "object/project/p-download-form";
+@use "object/project/p-case";
 
 //utility
 @use "object/utility/u-disp";
@@ -56,4 +56,3 @@
 @use "object/utility/u-text";
 @use "object/utility/u-pointer";
 @use "object/utility/u-italic";
-

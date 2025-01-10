@@ -5,11 +5,15 @@
   width: 100%;
   border-radius: rm(12);
   background: #EDF3F8;
-  padding: rm(40);
+  padding: rm(40) rm(40) rm(40) rm(28);
 
   @include mq(sp) {
     padding: rm(40) rm(20);
     margin-inline: auto;
+  }
+
+  &.--thanks {
+    padding: rm(38) rm(27) rm(36) rm(20);
   }
 }
 
@@ -18,6 +22,7 @@
 
   @include mq(sp) {
     font-size: rm(24);
+    line-height: 1.55;
   }
 }
 
@@ -25,7 +30,7 @@
   margin-block-start: rm(40);
   display: flex;
   flex-direction: column;
-  row-gap: rm(32);
+  row-gap: rm(33);
 
   @include mq(sp) {
     row-gap: rm(20);
@@ -35,7 +40,7 @@
 .p-download-form__field-box {
   display: flex;
   flex-direction: column;
-  row-gap: rm(13);
+  row-gap: rm(12);
 
   @include mq(sp) {
     row-gap: rm(8);
@@ -157,10 +162,17 @@
   text-underline-position: from-font;
   margin-inline: rm(10);
   font-weight: 700;
+  transition: opacity 0.3s ease;
 
   @include mq(sp) {
     @include font(14, 700, 20, );
     margin-inline: rm(10) rm(6);
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -175,11 +187,11 @@
 
 .p-download-form__submit {
   @include font(16, 500, 23, );
-  padding: rm(23) rm(79) rm(24);
+  padding: rm(23) rm(86) rm(24);
 
   @include mq(sp) {
     font-size: rm(14);
-    padding: rm(25) rm(69) rm(25) rm(70);
+    padding: rm(25) rm(72) rm(25) rm(73);
   }
 }
 
@@ -210,6 +222,13 @@
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+    transition: opacity 0.3s ease;
+
+    @media(any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
 
@@ -218,7 +237,7 @@
   margin-block-start: rm(36);
 
   @include mq(sp) {
-    margin-block-start: rm(35);
+    margin-block-start: rm(33);
   }
 }
 

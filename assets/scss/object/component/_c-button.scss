@@ -35,6 +35,52 @@
   color: $yellow;
   border: 3px solid $yellow;
   transition: all 0.3s ease;
+  padding: vw(32) vw(101) vw(32) vw(98);
+  position: relative;
+
+
+  @include mq(sp) {
+    padding: rm(27) rm(111) rm(27) rm(108);
+    border-width: rm(2);
+  }
+
+  .c-button__arrow,
+  .c-button__text {
+    @include font(24, 500, 29, );
+    font-family: $ff-en;
+
+    @include mq(sp) {
+      font-size: rm(16);
+    }
+  }
+
+  .c-button__arrow {
+    position: absolute;
+    right: vw(29);
+    top: 50%;
+    translate: 0 -50%;
+    transition: right 0.3s ease;
+
+    @include mq(sp) {
+      right: vw-sp(18);
+    }
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      background: $yellow;
+      color: $color-text;
+
+      .c-button__arrow {
+        right: vw(20);
+
+        @include mq(sp) {
+          right: vw-sp(12);
+        }
+      }
+    }
+  }
+
 }
 
 .c-button__quaternary {
@@ -45,10 +91,9 @@
 
 
   @include mq(sp) {
-    font-size: rm(14);
     width: rm(295);
     height: rm(72);
-    padding-inline: 0;
+    padding: rm(24) 0 rm(22);
   }
 
   .c-button__text,
@@ -56,6 +101,10 @@
     @include font(16, 500, 24, );
     color: $color-main;
     transition: all 0.3s ease;
+
+    @include mq(sp) {
+      font-size: rm(14);
+    }
   }
 
   .c-button__arrow {

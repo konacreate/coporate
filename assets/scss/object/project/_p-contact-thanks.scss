@@ -4,7 +4,7 @@
   background: url(../img/contact-top.jpg) no-repeat center center / cover;
 
   @include mq(sp) {
-    background: url(../img/sp/contact-top.jpg) no-repeat center center / cover;
+    background: url(../img/sp/contact-top-sp.jpg) no-repeat center center / cover;
   }
 }
 
@@ -16,6 +16,11 @@
 
 .p-contact-thanks__text {
   @include font(14, 500, 24, );
+  margin-inline-end: rm(64);
+
+  @include mq(sp) {
+    margin-inline-end: 0;
+  }
 }
 
 .p-contact-thanks__button {
@@ -35,5 +40,13 @@
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+    color: $color-main;
+    transition: opacity 0.3s ease;
+
+    @media(any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }

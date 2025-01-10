@@ -19,10 +19,11 @@ get_header();
 <?php endif; ?>
 
 <section class="l-low__contents p-about__contents">
+  <div class="l-inner__wide">
     <div class="p-about__concept --mission">
       <h2 class="p-about__concept-heading c-heading__title --mission --white">社会的使命</h2>
       <div class="p-about__message">
-        <h3 class="p-about__lead">人財育成を通じて、豊かな世界を創造する</h3>
+        <h3 class="p-about__lead">人財育成を通じて、<br class="u-sp">豊かな世界を創造する</h3>
         <p class="p-about__description">急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。</p>
       </div>
       <!-- /p-about__message -->
@@ -37,6 +38,8 @@ get_header();
       <!-- /p-about__message -->
     </div>
     <!-- /p-about__concept --vision -->
+  </div>
+  <!-- l-inner -->
   <div class="p-about__introduce">
     <div class="l-inner">
 

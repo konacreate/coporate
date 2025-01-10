@@ -52,6 +52,7 @@
     @include mq(sp) {
       width: rm(64);
       left: calc(100% + rm(13));
+      top: calc(50% + rm(3));
     }
 
     &::before {

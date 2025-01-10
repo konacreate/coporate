@@ -14,8 +14,7 @@
 
 <section class="l-low__contents">
   <div class="l-inner p-contact__inner">
-    <p class="p-contact__text">研修のお申し込み、その他お問い合わせは、下記のフォームからお問い合わせ内容をご記入ください。
-      2日以内に担当者からメールにてご連絡いたします。</p>
+    <p class="p-contact__text">研修のお申し込み、その他お問い合わせは、下記のフォームからお問い合わせ内容をご記入ください。<br>2日以内に担当者からメールにてご連絡いたします。</p>
     <div class="p-contact__contents">
       <h2 class="c-low-heading">お問い合わせ</h2>
       <div class="p-form">

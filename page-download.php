@@ -13,7 +13,7 @@
   </div><!-- /breadcrumb -->
 <?php endif; ?>
 
-<section class="l-low__contents">
+<section class="l-low__contents l-low__download">
   <div class="l-inner p-download__inner">
     <div class="p-download__content">
       <h2 class="p-download__heading">世界で活躍できるグローバルな人材を育てる３つの研修プログラムをご用意しております。</h2>
@@ -24,7 +24,7 @@
     </div>
     <div class="p-download-form">
       <p class="p-download-form__heading">資料ダウンロード</p>
-      <?php echo do_shortcode('[contact-form-7 id="157ea2c" title="ダウンロード資料"]'); ?>    </div>
+      <?php echo do_shortcode('[contact-form-7 id="157ea2c" title="資料をダウンロードする"]'); ?>    </div>
     <!-- /p-download-form -->
   </div>
   <!-- /l-inner p-download__inner -->

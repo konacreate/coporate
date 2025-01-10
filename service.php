@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <div class="l-low p-service">
-  <h1 class="c-low-title --service">当社について</h1>
+  <h1 class="c-low-title --service">サービス</h1>
 </div>
 
 <?php if (function_exists('bcn_display')) : ?>
@@ -23,7 +23,10 @@ get_header();
   <div class="p-service__programs">
     <div class="p-service__inner">
       <div class="p-service__program">
-        <figure class="p-service__img">
+        <figure class="p-service__img u-pc">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img1.jpg" alt="ビジネス英語研修">
+        </figure>
+        <figure class="p-service__img u-sp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-1.jpg" alt="ビジネス英語研修">
         </figure>
         <div class="p-service__detail">
@@ -35,11 +38,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd">ビジネスの中で使える英語コミュニケーション能力が必要な方</dd>
+              <dd class="p-service__dd--subject">ビジネスの中で使える英語コミュニケーション能力が必要な方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd">時間内容要相談</dd>
+              <dd class="p-service__dd--cost">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->
@@ -54,11 +57,14 @@ get_header();
       </div>
       <!-- /p-service__step -->
       <div class="p-service__program">
-        <figure class="p-service__img">
+        <figure class="p-service__img u-pc">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img2.jpg" alt="異文化コミュニケーション">
+        </figure>
+        <figure class="p-service__img u-sp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-2.jpg" alt="異文化コミュニケーション">
         </figure>
         <div class="p-service__detail">
-          <h3 class="p-service__detail-heading--main">異文化コミュニケーション</h3>
+          <h3 class="p-service__detail-heading--main">異文化<br class="u-sp">コミュニケーション</h3>
           <p class="p-service__detail-heading--sub u-italic">
             Cross-cultural communication
           </p>
@@ -66,11 +72,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd">海外へのビジネス展開を検討されている方</dd>
+              <dd class="p-service__dd--subject">海外へのビジネス展開を検討されている方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd">時間内容要相談</dd>
+              <dd class="p-service__dd--cost">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->
@@ -85,11 +91,14 @@ get_header();
       </div>
       <!-- /p-service__step -->
       <div class="p-service__program">
-        <figure class="p-service__img">
+        <figure class="p-service__img u-pc">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img3.jpg" alt="ビジネス留学プログラム">
+        </figure>
+        <figure class="p-service__img u-sp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-3.jpg" alt="ビジネス留学プログラム">
         </figure>
         <div class="p-service__detail">
-          <h3 class="p-service__detail-heading--main">ビジネス留学プログラム</h3>
+          <h3 class="p-service__detail-heading--main">ビジネス留学<br class="u-sp">プログラム</h3>
           <p class="p-service__detail-heading--sub u-italic">
             Business study abroad program
           </p>
@@ -97,11 +106,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd">英語コミュニケーション能力を習得し、将来的に海外で働きたい方</dd>
+              <dd class="p-service__dd--subject">英語コミュニケーション能力を習得し、将来的に海外で働きたい方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd">時間内容要相談</dd>
+              <dd class="p-service__dd--cost">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->

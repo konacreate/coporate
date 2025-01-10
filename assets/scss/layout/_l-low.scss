@@ -41,3 +41,19 @@
     padding-block: rm(60) rm(100);
   }
 }
+
+.l-low__article {
+  padding-block: rm(80) rm(175);
+
+  @include mq(sp) {
+    padding-block: rm(60) rm(100);
+  }
+}
+
+.l-low__download {
+  padding-block: rm(80) rm(120);
+
+  @include mq(sp) {
+    padding-block: rm(60) rm(100);
+  }
+}

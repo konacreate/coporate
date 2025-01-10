@@ -4,7 +4,7 @@
   margin-block-start: rm(60);
 
   @include mq(sp) {
-    margin-block-start: rm(40);
+    margin-block-start: rm(41);
   }
 }
 
@@ -12,10 +12,11 @@
   display: flex;
   flex-direction: column;
   row-gap: rm(32);
-  margin-block-end: rm(40);
+  margin-block-end: rm(38);
 
   @include mq(sp) {
-    row-gap: rm(20);
+    row-gap: rm(19);
+    margin-block-end: rm(40);
   }
 }
 
@@ -36,15 +37,15 @@
 }
 
 .p-form__label {
-  @include font(18, 700, 26, );
+  @include font(18, 700, 26);
 
   @include mq(sp) {
-    @include font(14, 700, 20, );
+    @include font(14, 700, 20);
   }
 }
 
 .p-form__tag {
-  @include font(12, 700, 17, );
+  @include font(12, 700, 17);
   color: $white;
   background: $accent-color-red;
   padding: rm(1) rm(8) rm(2);
@@ -57,7 +58,7 @@
 .p-form__text,
 .p-form__textarea {
   padding: rm(9) rm(15) rm(10);
-  @include font(16, 500, 23, );
+  @include font(16, 500, 23);
   border: 1px solid #ddd;
   background: $white;
   border-radius: rm(4);
@@ -65,7 +66,7 @@
   color: $color-text;
 
   @include mq(sp) {
-    @include font(14, 500, 20, );
+    @include font(14, 500, 20);
     padding: rm(11) rm(15);
   }
 
@@ -75,32 +76,33 @@
 }
 
 .p-form__select-wrapper {
- width: 100%;
- position: relative;
-
- &::before {
-   content: '';
-   position: absolute;
-   background: url(../img/select-arrow.svg) no-repeat center center / contain;
-   width: rm(11);
-   height: rm(7);
-   top: 50%;
-   translate: 0 -50%;
-   right: rm(16);
-
-   @include mq(sp) {
-    right: rm(14);
-   }
- }
-
- span {
   width: 100%;
- }
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/select-arrow.svg) no-repeat center center / contain;
+    width: rm(11);
+    height: rm(17);
+    top: 50%;
+    translate: 0 -50%;
+    right: rm(14);
+    pointer-events: none;
+
+    @include mq(sp) {
+      right: rm(14);
+    }
+  }
+
+  span {
+    width: 100%;
+  }
 }
 
 .p-form__select {
-  padding: rm(9) rm(15) rm(10);
-  @include font(16, 500, 23, );
+  padding: rm(9) rm(30) rm(10) rm(15);
+  @include font(16, 500, 23);
   border-radius: rm(4);
   border-color: #ddd;
   color: $color-text;
@@ -118,10 +120,41 @@
 .p-form__textarea {
   resize: vertical;
   height: rm(240);
+
+  @include mq(sp) {
+    height: rm(140);
+  }
 }
 
 .p-form__checkbox {
+  @include font(16, 500, 23);
   text-align: center;
+
+  @include mq(sp) {
+    font-size: rm(14);
+    margin-inline-start: rm(5);
+  }
+
+  .p-form__checkbox-link {
+    margin-inline: rm(10);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+    font-weight: 700;
+
+    @include mq(sp) {
+      margin-inline: rm(10) rm(6);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  span {
+    margin: 0;
+  }
 }
 
 .p-form__checkbox-input {
@@ -132,16 +165,14 @@
   position: relative;
   margin: 0;
   vertical-align: middle;
-  @include font(16, 500, 23, );
 
   @include mq(sp) {
     width: rm(28);
     height: rm(28);
-    font-size: rm(14);
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background: url(../img/check.svg) no-repeat center center / contain;
     width: rm(16);
@@ -154,31 +185,14 @@
     margin-block-start: rm(-2);
   }
   &:checked {
-    &::before{
+    &::before {
       opacity: 1;
     }
   }
 }
 
-.p-form__checkbox-link {
-  margin-inline: rm(10);
-  text-decoration: underline;
-  transition: opacity 0.3s ease;
-  font-weight: 700;
-
-  @include mq(sp) {
-    margin-inline: rm(10) rm(6);
-  }
-
-  @media(any-hover: hover) {
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
-
 .p-form__button {
-  margin-block-start: rm(46);
+  margin-block-start: rm(40);
   text-align: center;
 
   @include mq(sp) {
@@ -191,13 +205,15 @@
 }
 
 .p-form__submit {
-  @include font(16, 500, 24, );
+  @include font(16, 500, 24);
   padding: rm(23) rm(79);
+  margin-inline-start: rm(6);
 
   @include mq(sp) {
     font-size: rm(14);
     width: rm(295);
     height: rm(72);
     padding-block: rm(25);
+    margin-inline-start: 0;
   }
 }

@@ -4,17 +4,18 @@
       <div class="p-footer__download">
         <div class="p-footer__heading--sub u-italic">download</div>
         <div class="p-footer__heading--main">資料ダウンロード</div>
-        <a href="" class="p-footer__link c-button__tertiary"><span>View more
-            <span class="c-button--arrow">&rarr;</span>
-          </span></a>
+        <a href="<?php echo home_url('download'); ?>" class="p-footer__link c-button__tertiary">
+          <span class="c-button__text u-italic">View more</span>
+          <span class="c-button__arrow">&rarr;</span>
+        </a>
         <!-- /p-footer__link -->
       </div>
       <div class="p-footer__contact">
         <div class="p-footer__heading--sub u-italic">contact</div>
         <div class="p-footer__heading--main">お問い合わせ</div>
-        <a href="" class="p-footer__link c-button__tertiary"><span>View more
-            <span class="c-button--arrow">&rarr;</span>
-          </span>
+        <a href="<?php echo home_url('/contact'); ?>" class="p-footer__link c-button__tertiary">
+          <span class="c-button__text u-italic">View more</span>
+          <span class="c-button__arrow">&rarr;</span>
         </a>
         <!-- /p-footer__link -->
       </div>

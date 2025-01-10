@@ -20,16 +20,27 @@
 .c-meta__category {
   @include font(14, 500, 20, );
   color: $accent-color-red;
-  padding: rm(8) rm(24);
+  padding: rm(7) rm(23);
   border: 1px solid currentColor;
 
   @include mq(sp) {
     font-size: rm(12);
     padding: rm(3) rm(11) rm(4);
+
+    &.--single {
+      padding: rm(7) rm(11) rm(8) rm(11);
+    }
   }
 }
 
 .c-meta__time {
   @include font(14, 500, 20, );
   color: #888888;
+
+  @include mq(sp) {
+    &.--single {
+      line-height: calc(27 / 14);
+      padding-block: rm(0) rm(7);
+    }
+  }
 }

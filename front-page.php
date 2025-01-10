@@ -54,7 +54,7 @@
     <div class="l-inner p-top-about__inner">
       <div class="c-heading">
         <h2 class="c-heading__title --about">当社について</h2>
-        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--pc c-button-top u-pc">
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -70,7 +70,7 @@
           <figure class="p-top-about__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg" alt="コミュニケーションスキル習得をサポート">
           </figure>
-          <a href="" class="p-top-about__link--sp c-button-top u-sp">
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--sp c-button-top u-sp">
             <span class="c-button-top__text">
               View more
               <span class="c-button-top__arrow"></span>
@@ -86,11 +86,11 @@
   </section>
 
   <!-- サービス -->
-  <section class="l-top-service p-top-service">
+  <section class="l-top__service p-top-service">
     <div class="l-inner">
       <div class="c-heading">
         <h2 class="c-heading__title --service">サービス</h2>
-        <a href="" class="c-button-top u-pc">
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="c-button-top u-pc">
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -143,7 +143,7 @@
         <!-- /p-top-service__card -->
       </div>
       <!-- /p-top-service__cards -->
-      <a href="" class="p-top-service__link--sp c-button-top u-sp">
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="p-top-service__link--sp c-button-top u-sp">
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>
@@ -159,7 +159,7 @@
     <div class="l-inner">
       <div class="c-heading">
         <h2 class="c-heading__title --case --white">導入事例</h2>
-        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+        <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-about__link--pc c-button-top u-pc">
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -169,69 +169,47 @@
       </div>
       <!-- /c-heading -->
       <div class="p-top-case__cards">
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aaa.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">AAA株式会社　様</h3>
-            <p class="p-top-case__category">ビジネス英語研修</p>
-          </div>
-        </a>
-        <!-- /p-top-case__card -->
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bbb.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">合同会社BBB　様</h3>
-            <p class="p-top-case__category">異文化コミュニケーション</p>
-          </div>
-        </a>
-        <!-- /p-top-case__card -->
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ccc.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">合同会社CCC　様</h3>
-            <p class="p-top-case__category">ビジネス留学プログラム</p>
-          </div>
-        </a>
-        <!-- /p-top-case__card -->
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ddd.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">DDD株式会社　様</h3>
-            <p class="p-top-case__category">異文化コミュニケーション</p>
+        <?php
+         $args = array (
+          'post_type' => 'case',
+          'posts_per_page' => 6,
+          'orderby' => 'date',
+          'order' => 'DESC',
+         );
+         $custom_query = new WP_Query($args);
+         if($custom_query->have_posts()) :
+         ?>
+         <?php while($custom_query->have_posts()) : ?>
+          <?php $custom_query->the_post(); ?>
+        <a href="<?php echo esc_url(get_post_type_archive_link('case') . '#' . get_the_ID()); ?>" class="p-top-case__card">
+        <?php
+          $image = get_field('logo');
+          if(!empty($image)) : ?>
+        <div class="p-top-case__img">
+          <img src="<?php echo esc_url($image['url']); ?>" width="<?php echo esc_attr($image['width']); ?>" height="<?php echo esc_attr($image['height']); ?>">
+        </div>
+          <?php else : ?>
+        <div class="p-top-case__img">
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/img/noimg.png'); ?>" alt="画像なし">
+        </div>
+        <?php endif; ?>
+        <div class="p-top-case__body">
+            <h3 class="p-top-case__company"><?php the_title(); ?><span>様</span></h3>
+            <p class="p-top-case__category">
+              <?php
+              $terms = get_the_terms(get_the_ID(), 'business');
+              if($terms && !is_wp_error($terms)) : ?>
+              <?php echo $terms[0]->name; ?>
+              <?php endif; ?>
+            </p>
           </div>
         </a>
         <!-- /p-top-case__card -->
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eee.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">EEE株式会社　様</h3>
-            <p class="p-top-case__category">ビジネス留学プログラム</p>
-          </div>
-        </a>
-        <!-- /p-top-case__card -->
-        <a href="" class="p-top-case__card">
-          <div class="p-top-case__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fff.png" alt="">
-          </div>
-          <div class="p-top-case__body">
-            <h3 class="p-top-case__company">FFF株式会社　様</h3>
-            <p class="p-top-case__category">ビジネス英語研修</p>
-          </div>
-        </a>
-        <!-- /p-top-case__card -->
+         <?php endwhile; ?>
+        <?php endif; ?>
       </div>
       <!-- /p-top-case__cards -->
-      <a href="" class="p-top-case__link--sp c-button-top u-sp">
+      <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-case__link--sp c-button-top u-sp">
         <span class="c-button-top__text">
           View more
           <span class="c-button-top__arrow"></span>
@@ -245,7 +223,7 @@
     <div class="l-inner">
       <div class="c-heading">
         <h2 class="c-heading__title --news">新着情報</h2>
-        <a href="" class="c-button-top u-pc">
+        <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="c-button-top u-pc">
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -282,7 +260,7 @@
          <?php endif; ?>
       </div>
       <!-- /p-top-news__boxes -->
-      <a href="" class="p-top-news__link--sp c-button-top u-sp">
+      <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="p-top-news__link--sp c-button-top u-sp">
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>
