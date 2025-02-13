@@ -12,10 +12,13 @@
 
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div id="loading" class="p-loading">
     <p class="p-loading__text u-italic c-animated__blurText">Global Standard</p>
   </div>
 
+=======
+>>>>>>> parent of 0b44991 (アニメーション追加)
   <div class="p-header__space"></div>
 =======
 >>>>>>> parent of a3174c5 (完成)

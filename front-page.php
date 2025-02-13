@@ -37,16 +37,16 @@
     <!-- /p-mv__slider -->
 
     <div class="p-mv__heading-wrap">
-      <div class="p-mv__heading--sub u-italic u-pc c-animated__text">
-        <span class="js-bg">you can change</span><br>
-        <span class="js-bg">the world</span>
+      <div class="p-mv__heading--sub u-italic u-pc">
+        <span>YOU CAN CHANGE</span>
+        <span>THE WORLD</span>
       </div>
-      <div class="p-mv__heading--sub u-italic u-sp c-animated__text">
-        <span class="js-bg">you can</span>
-        <span class="js-bg">change</span>
-        <span class="js-bg">the world</span>
+      <div class="p-mv__heading--sub u-italic u-sp">
+        <span>YOU CAN</span>
+        <span>CHANGE</span>
+        <span>THE WORLD</span>
       </div>
-      <h1 class="p-mv__heading--main c-animated__text2">世界で活躍できるグローバルな人材を育てる</h1>
+      <h1 class="p-mv__heading--main">世界で活躍できるグローバルな人材を育てる</h1>
     </div>
   </div>
   <!-- 当社について -->
@@ -54,6 +54,7 @@
     <div class="l-inner p-top-about__inner">
 <<<<<<< HEAD
       <div class="c-heading">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <h2 class="c-heading__title --about c-animated__leftSlideIn">当社について</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
@@ -66,6 +67,10 @@
         <h2 class="c-heading__title --about">当社について</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
 >>>>>>> parent of a3174c5 (完成)
+=======
+        <h2 class="c-heading__title --about">当社について</h2>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -74,18 +79,22 @@
         </a>
       </div>
       <div class="p-top-about__items">
-        <div class="p-top-about__text c-animated__blur">
+        <div class="p-top-about__text">
           急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。<br><br>コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。<br><br>文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
         </div>
         <div class="p-top-about__img-wrapper">
-          <figure class="p-top-about__img c-animated__blur">
+          <figure class="p-top-about__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg" alt="コミュニケーションスキル習得をサポート">
           </figure>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--sp c-button-top u-sp c-animated__rightSlideIn">
 =======
           <a href="" class="p-top-about__link--sp c-button-top u-sp">
 >>>>>>> parent of a3174c5 (完成)
+=======
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--sp c-button-top u-sp">
+>>>>>>> parent of 0b44991 (アニメーション追加)
             <span class="c-button-top__text">
               View more
               <span class="c-button-top__arrow"></span>
@@ -106,6 +115,7 @@
 <<<<<<< HEAD
       <div class="c-heading">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h2 class="c-heading__title --service c-animated__leftSlideIn">サービス</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -117,6 +127,10 @@
         <h2 class="c-heading__title --service">サービス</h2>
         <a href="" class="c-button-top u-pc">
 >>>>>>> parent of a3174c5 (完成)
+=======
+        <h2 class="c-heading__title --service">サービス</h2>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="c-button-top u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -125,7 +139,7 @@
         </a>
       </div>
       <div class="p-top-service__cards">
-        <div class="p-top__service__card c-animated__fadeIn">
+        <div class="p-top__service__card">
           <div class="p-top__service__number u-italic --01">01</div>
           <div class="p-top-service__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-1.jpg" alt="ビジネス英語研修">
@@ -138,7 +152,7 @@
           <!-- /p-top-service__body -->
         </div>
         <!-- /p-top-service__card -->
-        <div class="p-top__service__card c-animated__fadeIn">
+        <div class="p-top__service__card">
           <div class="p-top__service__number u-italic --02">02</div>
           <div class="p-top-service__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-2.jpg" alt="ビジネス英語研修">
@@ -151,7 +165,7 @@
           <!-- /p-top-service__body -->
         </div>
         <!-- /p-top-service__card -->
-        <div class="p-top__service__card c-animated__fadeIn">
+        <div class="p-top__service__card">
           <div class="p-top__service__number u-italic --03">03</div>
           <div class="p-top-service__img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-3.jpg" alt="ビジネス留学サポートプログラム">
@@ -170,10 +184,14 @@
       </div>
       <!-- /p-top-service__cards -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="p-top-service__link--sp c-button-top u-sp c-animated__rightSlideIn">
 =======
       <a href="" class="p-top-service__link--sp c-button-top u-sp">
 >>>>>>> parent of a3174c5 (完成)
+=======
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="p-top-service__link--sp c-button-top u-sp">
+>>>>>>> parent of 0b44991 (アニメーション追加)
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>
@@ -190,6 +208,7 @@
 <<<<<<< HEAD
       <div class="c-heading">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h2 class="c-heading__title --case --white c-animated__leftSlideIn">導入事例</h2>
         <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -201,6 +220,10 @@
         <h2 class="c-heading__title --case --white">導入事例</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
 >>>>>>> parent of a3174c5 (完成)
+=======
+        <h2 class="c-heading__title --case --white">導入事例</h2>
+        <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -223,7 +246,7 @@
          ?>
          <?php while($custom_query->have_posts()) : ?>
           <?php $custom_query->the_post(); ?>
-        <a href="<?php echo esc_url(get_post_type_archive_link('case') . '#' . get_the_ID()); ?>" class="p-top-case__card c-animated__fadeIn">
+        <a href="<?php echo esc_url(get_post_type_archive_link('case') . '#' . get_the_ID()); ?>" class="p-top-case__card">
         <?php
           $image = get_field('logo');
           if(!empty($image)) : ?>
@@ -309,10 +332,14 @@
       </div>
       <!-- /p-top-case__cards -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-case__link--sp c-button-top u-sp c-animated__rightSlideIn">
 =======
       <a href="" class="p-top-case__link--sp c-button-top u-sp">
 >>>>>>> parent of a3174c5 (完成)
+=======
+      <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-case__link--sp c-button-top u-sp">
+>>>>>>> parent of 0b44991 (アニメーション追加)
         <span class="c-button-top__text">
           View more
           <span class="c-button-top__arrow"></span>
@@ -327,6 +354,7 @@
 <<<<<<< HEAD
       <div class="c-heading">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h2 class="c-heading__title --news c-animated__leftSlideIn">新着情報</h2>
         <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -338,6 +366,10 @@
         <h2 class="c-heading__title --news">新着情報</h2>
         <a href="" class="c-button-top u-pc">
 >>>>>>> parent of a3174c5 (完成)
+=======
+        <h2 class="c-heading__title --news">新着情報</h2>
+        <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="c-button-top u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -346,7 +378,11 @@
         </a>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div class="p-top-news__boxes  c-animated__fadeIn">
+=======
+      <div class="p-top-news__boxes">
+>>>>>>> parent of 0b44991 (アニメーション追加)
       <?php $recent_query = new WP_Query(
             array (
               'post_type' => 'post',
@@ -396,10 +432,14 @@
       </div>
       <!-- /p-top-news__boxes -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="p-top-news__link--sp c-button-top u-sp c-animated__rightSlideIn">
 =======
       <a href="" class="p-top-news__link--sp c-button-top u-sp">
 >>>>>>> parent of a3174c5 (完成)
+=======
+      <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="p-top-news__link--sp c-button-top u-sp">
+>>>>>>> parent of 0b44991 (アニメーション追加)
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>

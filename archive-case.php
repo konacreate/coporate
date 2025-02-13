@@ -117,7 +117,7 @@ get_header(); ?>
         </div>
         <!-- /p-case__category-cards -->
         <div class="p-case__button">
-          <a href="<?php echo home_url('/service#' . $genre_term->slug) ?>" class="c-button c-button__quaternary"><span class="c-button__text"><?php echo $genre_term->name; ?>の詳細</span><span class="c-button__arrow">&rarr;</span></a>
+          <a href="<?php echo esc_url(get_term_link($genre_term, 'business')) ?>" class="c-button c-button__quaternary"><span class="c-button__text"><?php echo $genre_term->name; ?>の詳細</span><span class="c-button__arrow">&rarr;</span></a>
         </div>
         <!-- /p-case__button -->
       </div>

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gsap.registerPlugin(ScrollTrigger);
 =======
 /**
@@ -25,6 +26,8 @@ switchViewport(375);
 =======
 >>>>>>> parent of a3174c5 (完成)
 
+=======
+>>>>>>> parent of 0b44991 (アニメーション追加)
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
   //定義
@@ -288,6 +291,7 @@ jQuery(function($){
   });
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 
 window.addEventListener("load", function () {
   // 1回目の訪問時と2回目以降で遅延を調整
@@ -476,3 +480,5 @@ if (!isFirstVisit) {
 =======
 });
 >>>>>>> parent of a3174c5 (完成)
+=======
+>>>>>>> parent of 0b44991 (アニメーション追加)

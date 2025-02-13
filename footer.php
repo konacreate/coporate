@@ -5,7 +5,11 @@
         <div class="p-footer__heading--sub u-italic">download</div>
         <div class="p-footer__heading--main">資料ダウンロード</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <a href="<?php echo home_url('/download'); ?>" class="p-footer__link c-button__tertiary">
+=======
+        <a href="<?php echo home_url('download'); ?>" class="p-footer__link c-button__tertiary">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <span class="c-button__text u-italic">View more</span>
           <span class="c-button__arrow">&rarr;</span>
         </a>

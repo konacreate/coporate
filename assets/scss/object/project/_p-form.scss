@@ -180,10 +180,14 @@
 .p-form__button {
 <<<<<<< HEAD
   margin-block-start: rm(40);
+<<<<<<< HEAD
 =======
   margin-block-start: rm(46);
   text-align: center;
 >>>>>>> parent of a3174c5 (完成)
+=======
+  text-align: center;
+>>>>>>> parent of 0b44991 (アニメーション追加)
 
   @include mq(sp) {
     margin-block-start: rm(40);
@@ -191,39 +195,6 @@
 
   .wpcf7-spinner {
     display: none;
-  }
-}
-
-.p-form__button-wrapper {
-  width: fit-content;
-  position: relative;
-  color: $white;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-  margin-inline: auto;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: $color-dark;
-    scale: 0 1;
-    transform-origin: right top;
-    transition: scale 0.3s ease;
-  }
-  @media(any-hover: hover) {
-    &:hover {
-      &::before {
-        scale: 1 1;
-        transform-origin: left center;
-      }
-    }
   }
 }
 

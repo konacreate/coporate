@@ -20,12 +20,17 @@ get_header();
 <?php endif; ?>
 
 <section class="l-low__contents">
-  <h2 class="p-service__heading c-animated__scale">世界で活躍できる<br>グローバルな人材を育てる<br class="u-sp">３つの研修プログラム</h2>
+  <h2 class="p-service__heading">世界で活躍できる<br>グローバルな人材を育てる<br class="u-sp">３つの研修プログラム</h2>
   <div class="p-service__programs">
     <div class="p-service__inner">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div id="business-english-training" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img1.jpg" alt="ビジネス英語研修">
         </figure>
         <figure class="p-service__img u-sp">
@@ -35,7 +40,7 @@ get_header();
 >>>>>>> parent of a3174c5 (完成)
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-1.jpg" alt="ビジネス英語研修">
         </figure>
-        <div class="p-service__detail c-animated__fadeIn --delay0">
+        <div class="p-service__detail">
           <h3 class="p-service__detail-heading--main">ビジネス英語研修</h3>
           <p class="p-service__detail-heading--sub u-italic">
             Business English Training
@@ -53,7 +58,7 @@ get_header();
           </div>
           <!-- /p-service__wrap -->
           <div class="p-service__button">
-            <a href="<?php echo home_url('/contact') ?>" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
+            <a href="" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
           </div>
           <!-- /p-service__button -->
           <div class="p-service__number u-italic">01</div>
@@ -63,14 +68,19 @@ get_header();
       </div>
       <!-- /p-service__step -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div id="cross-cultural-communication" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img2.jpg" alt="異文化コミュニケーション">
         </figure>
         <figure class="p-service__img u-sp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-2.jpg" alt="異文化コミュニケーション">
         </figure>
-        <div class="p-service__detail c-animated__fadeIn --delay0">
+        <div class="p-service__detail">
           <h3 class="p-service__detail-heading--main">異文化<br class="u-sp">コミュニケーション</h3>
 =======
       <div class="p-service__program">
@@ -96,7 +106,7 @@ get_header();
           </div>
           <!-- /p-service__wrap -->
           <div class="p-service__button">
-            <a href="<?php echo home_url('/contact') ?>" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
+            <a href="" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
           </div>
           <!-- /p-service__button -->
           <div class="p-service__number u-italic">02</div>
@@ -106,14 +116,19 @@ get_header();
       </div>
       <!-- /p-service__step -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div id="business-study-abroad-program" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img u-pc">
+>>>>>>> parent of 0b44991 (アニメーション追加)
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img3.jpg" alt="ビジネス留学プログラム">
         </figure>
         <figure class="p-service__img u-sp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-3.jpg" alt="ビジネス留学プログラム">
         </figure>
-        <div class="p-service__detail c-animated__fadeIn --delay0">
+        <div class="p-service__detail">
           <h3 class="p-service__detail-heading--main">ビジネス留学<br class="u-sp">プログラム</h3>
 =======
       <div class="p-service__program">
@@ -139,7 +154,7 @@ get_header();
           </div>
           <!-- /p-service__wrap -->
           <div class="p-service__button">
-            <a href="<?php echo home_url('/contact') ?>" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
+            <a href="" class="c-button c-button__quaternary"><span class="c-button__text">お申し込みはこちら</span><span class="c-button__arrow">&rarr;</span></a>
           </div>
           <!-- /p-service__button -->
           <div class="p-service__number u-italic">03</div>
@@ -157,8 +172,8 @@ get_header();
 
   <div class="p-service__flow">
     <div class="l-inner">
-      <h2 class="c-low-heading --white c-animated__fadeIn --delay0">導入の流れ</h2>
-      <div class="p-service__items c-animated__clipView">
+      <h2 class="c-low-heading --white">導入の流れ</h2>
+      <div class="p-service__items">
         <div class="p-service__item --01">
           <div class="p-service__step-wrapper">
             <span class="p-service__step u-italic">STEP</span>
@@ -216,8 +231,8 @@ get_header();
   <!-- よくある質問 -->
   <div class="p-service__qa">
     <div class="p-service__qa-inner">
-      <h2 class="c-low-heading c-animated__fadeIn --delay0">よくある質問</h2>
-      <div class="p-qa c-animated__fadeIn --delay0">
+      <h2 class="c-low-heading">よくある質問</h2>
+      <div class="p-qa">
         <details class="p-qa__details js-details">
           <summary class="p-qa__head js-summary">
             <span class="p-qa__head-text">どんな教材を使うのでしょうか？</span>

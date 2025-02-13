@@ -5,7 +5,11 @@
   width: 100%;
   border-radius: rm(12);
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: #edf3f8;
+=======
+  background: #EDF3F8;
+>>>>>>> parent of 0b44991 (アニメーション追加)
   padding: rm(40) rm(40) rm(40) rm(28);
 =======
   background: #EDF3F8;
@@ -19,7 +23,7 @@
 }
 
 .p-download-form__heading {
-  @include font(32, 700, 46);
+  @include font(32, 700, 46, );
 
   @include mq(sp) {
     font-size: rm(24);
@@ -58,7 +62,7 @@
 }
 
 .p-download-form__label {
-  @include font(18, 700, 26);
+  @include font(18, 700, 26, );
 
   @include mq(sp) {
     font-size: rm(14);
@@ -68,9 +72,9 @@
 .p-download-form__text {
   padding: rm(9) rm(15) rm(10);
   border-radius: rm(5);
-  border: 1px solid #ddd;
+  border: 1px solid #DDD;
   background: $white;
-  @include font(16, 500, 23);
+  @include font(16, 500, 23, );
   width: 100%;
 
   @include mq(sp) {
@@ -84,7 +88,7 @@
 }
 
 .p-download-form__tag {
-  @include font(12, 700, 17);
+  @include font(12, 700, 17, );
   color: $white;
   padding: rm(1) rm(8) rm(2);
   background: $accent-color-red;
@@ -108,7 +112,7 @@
   appearance: unset;
   width: rm(32);
   height: rm(32);
-  border: 1px solid #3e3e3e;
+  border: 1px solid #3E3E3E;
   background: $white;
   vertical-align: middle;
   position: relative;
@@ -126,10 +130,10 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
-    border-inline-start: 1px solid #3e3e3e;
-    border-block-end: 1px solid #3e3e3e;
+    border-inline-start: 1px solid #3E3E3E;
+    border-block-end: 1px solid #3E3E3E;
     rotate: -45deg;
     width: rm(14);
     height: rm(8);
@@ -145,7 +149,7 @@
 }
 
 .p-download-form__checkbox-text {
-  @include font(16, 700, 24);
+  @include font(16, 700, 24, );
 
   @include mq(sp) {
     font-size: rm(14);
@@ -164,12 +168,12 @@
   font-weight: 700;
 
   @include mq(sp) {
-    @include font(14, 700, 20);
+    @include font(14, 700, 20, );
     margin-inline: rm(10) rm(6);
   }
 <<<<<<< HEAD
 
-  @media (any-hover: hover) {
+  @media(any-hover: hover) {
     &:hover {
       opacity: 0.7;
     }
@@ -180,48 +184,20 @@
 
 .p-download-form__button {
   margin-block-start: rm(40);
+  text-align: center;
 
   .wpcf7-spinner {
     display: none;
   }
 }
 
-.p-download-form__button-wrapper {
-  width: fit-content;
-  position: relative;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-  margin-inline: auto;
-  background: #fff;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: $color-dark;
-    scale: 0 1;
-    transform-origin: right top;
-    transition: scale 0.3s ease;
-  }
-  @media (any-hover: hover) {
-    &:hover {
-      &::before {
-        scale: 1;
-        transform-origin: left center;
-      }
-    }
-  }
-}
-
 .p-download-form__submit {
 <<<<<<< HEAD
+<<<<<<< HEAD
   @include font(16, 500, 23);
+=======
+  @include font(16, 500, 23, );
+>>>>>>> parent of 0b44991 (アニメーション追加)
   padding: rm(23) rm(86) rm(24);
 =======
   @include font(16, 500, 23, );
@@ -235,7 +211,7 @@
 }
 
 .p-download-form__thanks-message {
-  @include font(14, 500, 19);
+  @include font(14, 500, 19, );
   margin-block-start: rm(40);
 
   @include mq(sp) {
@@ -247,7 +223,7 @@
   margin-block-start: rm(15);
   display: flex;
   column-gap: rm(8);
-  @include font(14, 500, 24);
+  @include font(14, 500, 24, );
 
   @include mq(sp) {
     margin-block-start: rm(12);
@@ -264,7 +240,7 @@
 <<<<<<< HEAD
     transition: opacity 0.3s ease;
 
-    @media (any-hover: hover) {
+    @media(any-hover: hover) {
       &:hover {
         opacity: 0.7;
       }
@@ -275,10 +251,11 @@
 }
 
 .p-download-form__thanks-text {
-  @include font(14, 500, 28);
+  @include font(14, 500, 28, );
   margin-block-start: rm(36);
 
   @include mq(sp) {
     margin-block-start: rm(35);
   }
 }
+

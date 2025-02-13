@@ -43,9 +43,6 @@
 }
 
 .p-mv__heading--sub {
-  display: flex;
-  flex-direction: column;
-  row-gap: vw(16);
 
   span {
     display: block;
@@ -54,13 +51,12 @@
     font-size: vw(60);
     font-style: italic;
     font-weight: 500;
+    background: $white;
     width: fit-content;
     line-height: calc(72 / 60);
-    text-transform: uppercase;
-    overflow: hidden;
 
     &:not(:first-of-type) {
-
+      margin-block-start: vw(16);
     }
 
     @include mq(sp) {
@@ -77,9 +73,9 @@
   color: $white;
   font-size: vw(20);
   font-weight: 700;
+  background: $color-main;
   margin-block-start: vw(16);
   line-height: calc(29 / 20);
-  width: fit-content;
 
   @include mq(sp) {
     margin-block-start: vw-sp(17);
