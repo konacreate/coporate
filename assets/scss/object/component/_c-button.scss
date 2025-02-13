@@ -7,14 +7,34 @@
 
 .c-button__primary {
   border-color: $color-main;
-  background: $white;
   text-align: center;
   color: $color-main;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $color-main;
+    scale: 0 1;
+    transform-origin: right top;
+    transition: scale 0.3s ease;
+  }
 
   @media(any-hover: hover) {
     &:hover {
-      background: $color-main;
       color: $white;
+
+      &::before {
+        scale: 1;
+        transform-origin: left center;
+      }
     }
   }
 }
@@ -24,9 +44,28 @@
   color: $white;
   text-align: center;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $color-dark;
+    scale: 0 1;
+    transform-origin: right top;
+    transition: scale 0.3s ease;
+  }
   @media(any-hover: hover) {
     &:hover {
-      background: $color-dark;
+      &::before {
+        scale: 1 1;
+        transform-origin: left center;
+      }
     }
   }
 }

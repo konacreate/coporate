@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
   //定義
@@ -282,3 +284,186 @@ jQuery(function ($) {
     }
   });
 });
+
+window.addEventListener("load", function () {
+  // 1回目の訪問時と2回目以降で遅延を調整
+  const isFirstTime = !isFirstVisit;
+  const delayTime = isFirstTime ? 3 : 1; // 初回訪問時は3秒遅延、2回目以降は1秒
+
+  // SplitTypeを1回だけ実行
+  const slideUpText = document.querySelectorAll(".c-animated__text");
+  new SplitType(slideUpText);
+  slideUpText.forEach((element) => {
+    const chars = element.querySelectorAll(".char");
+    const bg = element.querySelectorAll(".js-bg");
+
+    gsap.to(bg, {
+      scale: 1,
+      stagger: 0.06,
+      delay: delayTime,
+    });
+
+    gsap.to(chars, {
+      scale: 1,
+      y: 0,
+      rotationY: 360,
+      stagger: 0.06,
+      delay: delayTime,
+    });
+  });
+
+  const isFirstTime2 = !isFirstVisit;
+  const delayTime2 = isFirstTime ? 4.2 : 2.2; // 初回訪問時は3.4秒遅延、2回目以降は1秒
+  // Slide up 2
+  const slideUpText2 = document.querySelectorAll(".c-animated__text2");
+  new SplitType(slideUpText2);
+  slideUpText2.forEach((element) => {
+    const chars = element.querySelectorAll(".char");
+    gsap.to(slideUpText2, {
+      scale: 1,
+      stagger: 0.06,
+      delay: delayTime2,
+    });
+
+    gsap.to(chars, {
+      opacity: 1,
+      stagger: 0.06,
+      delay: delayTime2,
+    });
+  });
+
+  // wave
+  const blurText = document.querySelectorAll(".c-animated__blurText");
+
+  blurText.forEach((item) => {
+    // gsapでアニメーションを実行する
+    gsap.to(item, {
+      onStart: () => {
+        // アニメーション開始時にクラスを追加
+        item.classList.add("js-show");
+      },
+    });
+  });
+
+  // 左スライドイン
+  const leftSlideIn = document.querySelectorAll(".c-animated__leftSlideIn");
+  leftSlideIn.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      onEnter: () => {
+        gsap.to(item, {
+          opacity: 1,
+          x: 0,
+        });
+      },
+    });
+  });
+
+  // 右スライドイン
+  const rightSlideIn = document.querySelectorAll(".c-animated__rightSlideIn");
+  rightSlideIn.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      onEnter: () => {
+        gsap.to(item, {
+          opacity: 1,
+          x: 0,
+        });
+      },
+    });
+  });
+
+  // Scale Animation
+  const scale = document.querySelectorAll(".c-animated__scale");
+  scale.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      onEnter: () => {
+        gsap.to(item, {
+          scale: 1,
+        });
+      },
+    });
+  });
+
+  // FadeIn Down
+  const fadeInDown = document.querySelectorAll(".c-animated__fadeInDown");
+  fadeInDown.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      onEnter: () => {
+        item.classList.add("js-show");
+      },
+    });
+  });
+
+  // Clip View
+  const clipViewItems = document.querySelectorAll(".c-animated__clipView");
+  clipViewItems.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      onEnter: () => {
+        item.classList.add("js-show");
+      },
+    });
+  });
+
+  // c-animated__blur
+  const blur = document.querySelectorAll(".c-animated__blur");
+  blur.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      invalidateOnRefresh: true,
+      onEnter: () => {
+        item.classList.add("js-show");
+      },
+    });
+  });
+
+  const fadeIn = document.querySelectorAll(".c-animated__fadeIn");
+  fadeIn.forEach((item) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 70%",
+      invalidateOnRefresh: true,
+      onEnter: () => {
+        item.classList.add("js-show");
+      },
+    });
+  });
+
+  // リサイズ時にScrollTriggerを再計算
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
+});
+
+const isFirstVisit = sessionStorage.getItem("firstVisit");
+const loadingScreen = document.querySelector("#loading");
+const loadingEndTime = 2000; // 読み込み完了した後の発火までの時間
+
+if (!isFirstVisit) {
+  // 初回訪問時に発火させるもの
+  window.addEventListener("load", function () {
+    // ロード完了時に処理が実行される
+    setTimeout(() => {
+      loadingScreen.classList.add("js-loading-end");
+      // 実行完了したら完全にloading画面を非表示にさせます
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 1000);
+    }, loadingEndTime);
+  });
+
+  // 初回訪問の場合、セッションストレージにフラグをセット
+  sessionStorage.setItem("firstVisit", "true");
+} else {
+  // 2回目以降の訪問時に発火させるもの
+  loadingScreen.style.display = "none";
+}

@@ -62,6 +62,10 @@ select {
   font: inherit;
 }
 
+input {
+  background-color: unset;
+}
+
 @media (min-width: px($breakpoint)) {
   //pcではtelかけられないように
   a[href*="tel:"] {

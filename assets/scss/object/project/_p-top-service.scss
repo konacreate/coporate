@@ -23,18 +23,18 @@
 
 
   &:nth-child(2) {
-    translate: 0 rm(60);
+    top: rm(60);
   }
 
   &:nth-child(3) {
-    translate: 0 rm(120);
+    top: rm(120);
   }
 
   @include mq(sp) {
     margin-inline-start: rm(15);
     &:nth-child(2),
     &:nth-child(3) {
-      translate: 0;
+      top: 0;
     }
 
     &:nth-child(2) {

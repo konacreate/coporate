@@ -10,6 +10,10 @@
 </head>
 
 <body>
+  <div id="loading" class="p-loading">
+    <p class="p-loading__text u-italic c-animated__blurText">Global Standard</p>
+  </div>
+
   <div class="p-header__space"></div>
   <header class="p-header">
     <div class="p-header__inner">

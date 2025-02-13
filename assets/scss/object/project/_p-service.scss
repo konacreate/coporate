@@ -18,7 +18,7 @@
 }
 
 .p-service__programs {
-  margin-block: rm(133) rm(160);
+  margin-block: rm(80) rm(160);
   position: relative;
 
   @include mq(sp) {
@@ -42,10 +42,12 @@
 .p-service__program {
   display: flex;
   flex-direction: row-reverse;
+  padding-block-start: min(vw(53), 53px);
 
   &:nth-child(2n) {
     flex-direction: row;
-    margin-block-start: min(vw(261), 261px);
+    margin-block-start: min(vw(200), 200px);
+    padding-block-start: min(vw(62), 62px);
 
     .p-service__img {
       margin-block-start: min(vw(59), 59px);
@@ -73,6 +75,7 @@
     @include mq(sp) {
       display: block;
       margin-block-start: min(vw-sp(80), 80px);
+      padding-block-start: 0;
 
       .p-service__detail {
         margin-inline: auto;
@@ -120,7 +123,7 @@
   }
 
   &:nth-child(3) {
-    margin-block-start: min(vw(258),258px);
+    margin-block-start: min(vw(205),205px);
 
     .p-service__detail {
       padding-block: min(vw(78), 78px) min(vw(60), 60px);
@@ -157,6 +160,7 @@
 
   @include mq(sp) {
     display: block;
+    padding-block-start: 0;
   }
 
 }

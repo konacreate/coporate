@@ -16,11 +16,11 @@
   @include font(24, 700, 35, );
   color: $color-main;
   position: relative;
-  translate: 0 rm(60);
+  top: rm(60);
 
   @include mq(sp) {
     @include font(16, 700, 23, );
-    translate: 0;
+    top: 0;
   }
 
   &::before {
