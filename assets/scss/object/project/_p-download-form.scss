@@ -4,16 +4,17 @@
   max-width: 550px;
   width: 100%;
   border-radius: rm(12);
+<<<<<<< HEAD
   background: #edf3f8;
   padding: rm(40) rm(40) rm(40) rm(28);
+=======
+  background: #EDF3F8;
+  padding: rm(40);
+>>>>>>> parent of a3174c5 (完成)
 
   @include mq(sp) {
     padding: rm(40) rm(20);
     margin-inline: auto;
-  }
-
-  &.--thanks {
-    padding: rm(38) rm(27) rm(36) rm(20);
   }
 }
 
@@ -22,7 +23,6 @@
 
   @include mq(sp) {
     font-size: rm(24);
-    line-height: 1.55;
   }
 }
 
@@ -30,7 +30,7 @@
   margin-block-start: rm(40);
   display: flex;
   flex-direction: column;
-  row-gap: rm(33);
+  row-gap: rm(32);
 
   @include mq(sp) {
     row-gap: rm(20);
@@ -40,7 +40,7 @@
 .p-download-form__field-box {
   display: flex;
   flex-direction: column;
-  row-gap: rm(12);
+  row-gap: rm(13);
 
   @include mq(sp) {
     row-gap: rm(8);
@@ -162,18 +162,20 @@
   text-underline-position: from-font;
   margin-inline: rm(10);
   font-weight: 700;
-  transition: opacity 0.3s ease;
 
   @include mq(sp) {
     @include font(14, 700, 20);
     margin-inline: rm(10) rm(6);
   }
+<<<<<<< HEAD
 
   @media (any-hover: hover) {
     &:hover {
       opacity: 0.7;
     }
   }
+=======
+>>>>>>> parent of a3174c5 (完成)
 }
 
 .p-download-form__button {
@@ -218,12 +220,17 @@
 }
 
 .p-download-form__submit {
+<<<<<<< HEAD
   @include font(16, 500, 23);
   padding: rm(23) rm(86) rm(24);
+=======
+  @include font(16, 500, 23, );
+  padding: rm(23) rm(79) rm(24);
+>>>>>>> parent of a3174c5 (完成)
 
   @include mq(sp) {
     font-size: rm(14);
-    padding: rm(25) rm(72) rm(25) rm(73);
+    padding: rm(25) rm(69) rm(25) rm(70);
   }
 }
 
@@ -254,6 +261,7 @@
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+<<<<<<< HEAD
     transition: opacity 0.3s ease;
 
     @media (any-hover: hover) {
@@ -261,6 +269,8 @@
         opacity: 0.7;
       }
     }
+=======
+>>>>>>> parent of a3174c5 (完成)
   }
 }
 
@@ -269,6 +279,6 @@
   margin-block-start: rm(36);
 
   @include mq(sp) {
-    margin-block-start: rm(33);
+    margin-block-start: rm(35);
   }
 }

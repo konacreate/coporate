@@ -64,11 +64,6 @@
   &.--case {
     &::before {
       content: 'CASE STUDY';
-      padding-inline-end: rm(3);
-
-      @include mq(sp) {
-        padding-inline-end: rm(1);
-      }
     }
   }
 }

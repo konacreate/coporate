@@ -57,7 +57,6 @@
 
 .p-widget__body {
   padding: rm(3) 0 rm(3) rm(10);
-  width: 100%;
 
   @include mq(sp) {
     padding: 0 0 0 rm(12);
@@ -101,10 +100,6 @@
     border-block-end: 1px solid #DDDDDD;
     display: block;
     transition: opacity 0.3s ease;
-
-    @include mq(sp) {
-      padding-block: rm(16);
-    }
 
     &:first-child {
       border-block-start: 1px solid #DDDDDD;

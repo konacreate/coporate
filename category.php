@@ -43,7 +43,7 @@
                   <?php endif; ?>
                   </div>
                   <!-- /c-meta__wrapper -->
-                  <time datetime="<?php the_time('c'); ?>" class="c-meta__time"><?php the_time('Y.m.d'); ?></time>
+                  <time datetime="<?php the_time('c') ?>" class="c-meta__time"><?php the_time('Y.m.d') ?></time>
                 </div>
                 <!-- /p-news__meta c-meta -->
                 <h3 class="p-news__title"><?php the_title(); ?></h3>

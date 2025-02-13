@@ -29,8 +29,7 @@
 
   @include mq(sp) {
     font-size: rm(20);
-    line-height: 1.4;
-    margin-block-start: rm(2);
+    margin-block-start: 0;
   }
 }
 
@@ -38,15 +37,15 @@
   margin-block-start: rm(41);
 
   @include mq(sp) {
-    margin-block-start: rm(22);
+    margin-block-start: rm(24);
   }
 }
 
 .p-article__body {
-  margin-block-start: rm(40);
+  margin-block-start: rm(47);
 
   h2 {
-    @include font(20, 700, 46, );
+    @include font(20, 700, 29, );
     padding-inline-start: rm(20);
     color: $color-main;
     border-inline-start: 6px solid $color-main;
@@ -68,31 +67,26 @@
     @include font(18, 700, 26, );
     border-block-end: 1px solid $color-main;
     padding-block-end: rm(6);
-    color: $color-main;
 
     @include mq(sp) {
-      padding-block-end: rm(3);
-      margin-block-start: rm(36);
-      line-height: calc(32 / 18);
+      padding-block-end: 0;
+      margin-block-start: rm(32);
     }
   }
 
   h4 {
-    margin-block-start: rm(38);
+    margin-block-start: rm(39);
     @include font(16, 700, 23, );
-    color: $color-main;
+
+    margin-block-start: rm(32);
   }
 
   h4 + p {
     margin-block-start: rm(14);
 
     @include mq(sp) {
-      margin-block-start: rm(14);
+      margin-block-start: rm(7);
     }
-  }
-
-  p {
-    @include font(14, 500, 24, );
   }
 
   ul {
@@ -103,8 +97,8 @@
     row-gap: rm(16);
 
     @include mq(sp) {
-      margin-block-start: rm(40);
-      padding-inline: rm(15);
+      margin-block-start: rm(32);
+      padding-inline: 0;
       row-gap: rm(20);
     }
 
@@ -131,7 +125,7 @@
 
     @include mq(sp) {
       margin: rm(57) 0 0 0;
-      padding: rm(30) rm(32) rm(30) rm(28);
+      padding: rm(30) rm(32) rm(23) rm(28);
     }
 
     &::before {
@@ -144,12 +138,7 @@
       @include font(163, 700, 261, );
       color: #E8E8E8;
       z-index: 1;
-
-      @include mq(sp) {
-        top: rm(-41);
-        translate: 0;
-        left: rm(10);
-      }
+      ;
     }
     p {
       position: relative;

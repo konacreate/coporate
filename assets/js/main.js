@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 gsap.registerPlugin(ScrollTrigger);
 =======
 /**
@@ -21,10 +22,13 @@ switchViewport(375);
 
 
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+>>>>>>> parent of a3174c5 (完成)
 
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
   //定義
+<<<<<<< HEAD
 <<<<<<< HEAD
   const drawerIcon = document.querySelector(".p-drawer__icon");
   const drawer = document.querySelector(".p-drawer");
@@ -35,11 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerHeight = document.querySelector(".p-header").offsetHeight;
   const header = document.querySelector(".p-header");
 =======
+=======
+>>>>>>> parent of a3174c5 (完成)
   const drawerIcon = document.querySelector('.p-drawer__icon');
   const drawer = document.querySelector('.p-drawer');
   const drawerNavItem = document.querySelectorAll('.p-drawer__body a[href^="#"]');
   const headerHeight = document.querySelector('.p-header').offsetHeight;
+<<<<<<< HEAD
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+  const header = document.querySelector('.p-header');
+>>>>>>> parent of a3174c5 (完成)
   const breakpoint = 768;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
@@ -51,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawerIcon.classList.add("js-show");
 <<<<<<< HEAD
       header.classList.add("js-fixed");
+<<<<<<< HEAD
       headerSpace.classList.add("js-drawer-open");
 
       // 背景のスクロールを無効にする
@@ -70,8 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 =======
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+>>>>>>> parent of a3174c5 (完成)
     }
-  };
+  }
 
   //メニューを閉じるアニメーション
   const closeMenu = () => {
@@ -80,33 +93,22 @@ document.addEventListener("DOMContentLoaded", () => {
       drawerIcon.classList.remove("js-show");
 <<<<<<< HEAD
       header.classList.remove("js-fixed");
+<<<<<<< HEAD
       headerSpace.classList.remove("js-drawer-open");
 =======
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+>>>>>>> parent of a3174c5 (完成)
       isMenuOpen = false;
-
-      // 背景のスクロールを元に戻す
-      document.body.style.overflow = ""; // bodyのスクロールを元に戻す
-      document.documentElement.style.overflow = ""; // htmlのスクロールを元に戻す
-
-      // メニューが閉じたら、ドロワーアイコンにフォーカスを戻す
-      drawerIcon.focus();
-
-      // メニュー外の要素のフォーカスを戻す
-      document.querySelectorAll("a, button").forEach((el) => {
-        el.setAttribute("tabindex", "0"); // メニュー外の要素のフォーカスを再度有効にする
-      });
     }
-  };
+  }
 
   //メニューの開閉動作
   const toggleMenu = () => {
-    if (isMenuOpen) {
-      closeMenu();
-      drawerIcon.setAttribute("aria-expanded", "false");
-    } else {
+    if (!drawer.classList.contains("js-show")) {
       openMenu();
-      drawerIcon.setAttribute("aria-expanded", "true");
+    } else {
+      closeMenu();
     }
   };
 
@@ -123,32 +125,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //メニュー外クリック処理
   const clickOuter = (event) => {
-    if (
-      drawer.classList.contains("js-show") &&
-      !drawer.contains(event.target) &&
-      isMenuOpen
-    ) {
+    if (drawer.classList.contains("js-show") && !drawer.contains(event.target) && isMenuOpen) {
       closeMenu();
-    } else if (
-      drawer.classList.contains("js-show") &&
-      !drawer.contains(event.target)
-    ) {
+    } else if (drawer.classList.contains("js-show") && !drawer.contains(event.target)) {
       isMenuOpen = true;
     }
-  };
+  }
 
   //該当箇所までスクロール
   const linkScroll = (target) => {
     if (target) {
-      const targetPosition =
-        target.getBoundingClientRect().top + window.scrollY;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = targetPosition - headerHeight;
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
-  };
+  }
 
   //ヘッダーアイコン クリック時
   drawerIcon.addEventListener("click", toggleMenu);
@@ -157,8 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //メニュー外クリック時
   document.addEventListener("click", clickOuter);
   //ページ内リンクナビメニュー クリック時
-  drawerNavItem.forEach((item) => {
-    item.addEventListener("click", (event) => {
+  drawerNavItem.forEach(item => {
+    item.addEventListener("click", event => {
       event.preventDefault();
       closeMenu();
       const targetItem = document.querySelector(item.getAttribute("href"));
@@ -167,31 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ページ内リンクのスムーススクロール
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      event.preventDefault();
-      const targetId = item.getAttribute("href");
-      const target = document.querySelector(targetId);
-      if (target) {
-        const elementPosition = target.getBoundingClientRect().top;
-        window.scrollTo({
-          top: elementPosition,
-          behavior: "smooth",
-        });
-      }
-    });
-  });
-});
 
 // swiper
-const swiperMV = new Swiper(".js-mv-swiper", {
+const swiperMV = new Swiper('.js-mv-swiper', {
   // Optional parameters
   loop: true,
-  slidesPerView:
-    "auto" /* autoにすることでレスポンシブに応じてサイズを変えずに枚数を可変 */,
+  slidesPerView: "auto", /* autoにすることでレスポンシブに応じてサイズを変えずに枚数を可変 */
   // spaceBetween: 10,
   speed: 2000,
   autoplay: {
@@ -217,7 +192,7 @@ window.addEventListener("load", function () {
   }
 
   // Swiperを更新して新しいスライドを反映
-  swiperMV.update();
+ swiperMV.update();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -268,51 +243,50 @@ const setUpAccordion = () => {
       }
     });
   });
-};
+}
 /**
  * アコーディオンを閉じる時のアニメーション
  */
-const closingAnim = (content, element) =>
-  gsap.to(content, {
-    height: 0,
-    opacity: 0,
-    duration: 0.4,
-    ease: "power3.out",
-    overwrite: true,
-    onComplete: () => {
-      // アニメーションの完了後にopen属性を取り除く
-      element.removeAttribute("open");
-    },
-  });
+const closingAnim = (content, element) => gsap.to(content, {
+  height: 0,
+  opacity: 0,
+  duration: 0.4,
+  ease: "power3.out",
+  overwrite: true,
+  onComplete: () => {
+    // アニメーションの完了後にopen属性を取り除く
+    element.removeAttribute("open");
+  },
+});
 
 /**
  * アコーディオンを開く時のアニメーション
  */
-const openingAnim = (content) =>
-  gsap.fromTo(
-    content,
-    {
-      height: 0,
-      opacity: 0,
-    },
-    {
-      height: "auto",
-      opacity: 1,
-      duration: 0.4,
-      ease: "power3.out",
-      overwrite: true,
-    }
-  );
+const openingAnim = (content) => gsap.fromTo(
+  content,
+  {
+    height: 0,
+    opacity: 0,
+  },
+  {
+    height: "auto",
+    opacity: 1,
+    duration: 0.4,
+    ease: "power3.out",
+    overwrite: true,
+  }
+);
 
-jQuery(function ($) {
-  const Target = $(".js-empty");
-  $(Target).on("change", function () {
-    if ($(Target).val() !== "") {
-      $(this).removeClass("js-empty");
+jQuery(function($){
+  const Target = $('.js-empty');
+  $(Target).on('change', function(){
+    if ($(Target).val() !== ""){
+      $(this).removeClass('js-empty');
     } else {
-      $(this).addClass("js-empty");
+      $(this).addClass('js-empty');
     }
   });
+<<<<<<< HEAD
 });
 
 window.addEventListener("load", function () {
@@ -499,3 +473,6 @@ if (!isFirstVisit) {
 }
 =======
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+});
+>>>>>>> parent of a3174c5 (完成)

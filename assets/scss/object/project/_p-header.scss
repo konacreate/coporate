@@ -1,15 +1,6 @@
 @use "../../global" as *;
 
 //ヘッダー ========================
-.p-header__space {
-  &.js-drawer-open {
-    padding-block-start: calc(79 / 1199 * 100vw);
-     @include mq(sp) {
-      padding-block-start: rm(60);
-    }
-  }
-}
-
 .p-header {
   width: 100%;
   height: auto;
@@ -34,18 +25,11 @@
   font-weight: 700;
   line-height: calc(47 / 40);
   text-transform: capitalize;
-  transition: opacity 0.3s ease;
 
   @include mq(sp) {
     font-size: rm(28);
     letter-spacing: 0.005em;
     line-height: calc(33 / 28);
-  }
-
-  @media(any-hover: hover) {
-    &:hover {
-      opacity: 0.7;
-    }
   }
 }
 .p-header__nav {

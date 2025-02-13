@@ -9,6 +9,7 @@
 @use "layout/l-inner";
 @use "layout/l-footer";
 @use "layout/l-section";
+@use "layout/l-top-service";
 @use "layout/l-top";
 @use "layout/l-low";
 
@@ -46,10 +47,13 @@
 @use "object/project/p-pagination-single";
 @use "object/project/p-download";
 @use "object/project/p-download-form";
+<<<<<<< HEAD
 @use "object/project/p-case";
 @use "object/project/p-loading";
 =======
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+>>>>>>> parent of a3174c5 (完成)
 
 //utility
 @use "object/utility/u-disp";
@@ -57,3 +61,4 @@
 @use "object/utility/u-text";
 @use "object/utility/u-pointer";
 @use "object/utility/u-italic";
+

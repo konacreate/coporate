@@ -3,15 +3,18 @@
 .p-breadcrumb {
   margin-block-start: vw(13);
   margin-inline: auto;
-  max-width: 1180px;
+  max-width: 1100px;
   padding-inline: vw(40);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   @include mq(sp) {
     padding-inline: rm(20);
     margin-block-start: rm(10);
   };
 
+=======
+>>>>>>> parent of a3174c5 (完成)
   .p-breadcrumb__symbol {
     margin-inline: rm(8);
   }
@@ -21,17 +24,14 @@
     @include font(12, 500, 17, );
   }
 
+<<<<<<< HEAD
   a {
 =======
   .home {
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+  .home {
+>>>>>>> parent of a3174c5 (完成)
     color: #888;
-    transition: opacity 0.3s ease;
-
-    @media(any-hover: hover) {
-      &:hover {
-        opacity: 0.7;
-      }
-    }
   }
 }

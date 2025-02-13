@@ -1,13 +1,5 @@
 @use "../global" as *;
 
-.l-top__service {
-  padding-block: rm(119) rm(122);
-
-  @include mq(sp) {
-    padding-block: rm(119) rm(105);
-  }
-}
-
 .l-top__case {
   margin-block: rm(104) 0;
 
@@ -20,6 +12,6 @@
   padding-block: rm(165) rm(160);
 
   @include mq(sp) {
-    padding-block: rm(125) rm(208);
+    padding-block: rm(125) rm(203);
   }
 }

@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <div class="l-low p-service">
-  <h1 class="c-low-title --service">サービス</h1>
+  <h1 class="c-low-title --service">当社について</h1>
 </div>
 
 <?php if (function_exists('bcn_display')) : ?>
@@ -23,11 +23,16 @@ get_header();
   <h2 class="p-service__heading c-animated__scale">世界で活躍できる<br>グローバルな人材を育てる<br class="u-sp">３つの研修プログラム</h2>
   <div class="p-service__programs">
     <div class="p-service__inner">
+<<<<<<< HEAD
       <div id="business-english-training" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img1.jpg" alt="ビジネス英語研修">
         </figure>
         <figure class="p-service__img u-sp">
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img">
+>>>>>>> parent of a3174c5 (完成)
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-1.jpg" alt="ビジネス英語研修">
         </figure>
         <div class="p-service__detail c-animated__fadeIn --delay0">
@@ -39,11 +44,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd--subject">ビジネスの中で使える英語コミュニケーション能力が必要な方</dd>
+              <dd class="p-service__dd">ビジネスの中で使える英語コミュニケーション能力が必要な方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd--cost">時間内容要相談</dd>
+              <dd class="p-service__dd">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->
@@ -57,6 +62,7 @@ get_header();
         <!-- /p-service__detail -->
       </div>
       <!-- /p-service__step -->
+<<<<<<< HEAD
       <div id="cross-cultural-communication" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img2.jpg" alt="異文化コミュニケーション">
@@ -66,6 +72,14 @@ get_header();
         </figure>
         <div class="p-service__detail c-animated__fadeIn --delay0">
           <h3 class="p-service__detail-heading--main">異文化<br class="u-sp">コミュニケーション</h3>
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-2.jpg" alt="異文化コミュニケーション">
+        </figure>
+        <div class="p-service__detail">
+          <h3 class="p-service__detail-heading--main">異文化コミュニケーション</h3>
+>>>>>>> parent of a3174c5 (完成)
           <p class="p-service__detail-heading--sub u-italic">
             Cross-cultural communication
           </p>
@@ -73,11 +87,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd--subject">海外へのビジネス展開を検討されている方</dd>
+              <dd class="p-service__dd">海外へのビジネス展開を検討されている方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd--cost">時間内容要相談</dd>
+              <dd class="p-service__dd">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->
@@ -91,6 +105,7 @@ get_header();
         <!-- /p-service__detail -->
       </div>
       <!-- /p-service__step -->
+<<<<<<< HEAD
       <div id="business-study-abroad-program" class="p-service__program">
         <figure class="p-service__img u-pc c-animated__fadeInDown">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-img3.jpg" alt="ビジネス留学プログラム">
@@ -100,6 +115,14 @@ get_header();
         </figure>
         <div class="p-service__detail c-animated__fadeIn --delay0">
           <h3 class="p-service__detail-heading--main">ビジネス留学<br class="u-sp">プログラム</h3>
+=======
+      <div class="p-service__program">
+        <figure class="p-service__img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-3.jpg" alt="ビジネス留学プログラム">
+        </figure>
+        <div class="p-service__detail">
+          <h3 class="p-service__detail-heading--main">ビジネス留学プログラム</h3>
+>>>>>>> parent of a3174c5 (完成)
           <p class="p-service__detail-heading--sub u-italic">
             Business study abroad program
           </p>
@@ -107,11 +130,11 @@ get_header();
           <div class="p-service__wrap">
             <dl class="p-service__dl">
               <dt class="p-service__dt">対象</dt>
-              <dd class="p-service__dd--subject">英語コミュニケーション能力を習得し、将来的に海外で働きたい方</dd>
+              <dd class="p-service__dd">英語コミュニケーション能力を習得し、将来的に海外で働きたい方</dd>
             </dl>
             <dl class="p-service__dl">
               <dt class="p-service__dt">費用</dt>
-              <dd class="p-service__dd--cost">時間内容要相談</dd>
+              <dd class="p-service__dd">時間内容要相談</dd>
             </dl>
           </div>
           <!-- /p-service__wrap -->

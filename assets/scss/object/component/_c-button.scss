@@ -86,6 +86,7 @@
   border: 3px solid $yellow;
   transition: all 0.3s ease;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding: vw(32) vw(101) vw(32) vw(98);
   position: relative;
 
@@ -132,6 +133,8 @@
     }
   }
 
+=======
+>>>>>>> parent of a3174c5 (完成)
 }
 
 .c-button__quaternary {
@@ -142,9 +145,10 @@
 
 
   @include mq(sp) {
+    font-size: rm(14);
     width: rm(295);
     height: rm(72);
-    padding: rm(24) 0 rm(22);
+    padding-inline: 0;
   }
 
   .c-button__text,
@@ -152,10 +156,6 @@
     @include font(16, 500, 24, );
     color: $color-main;
     transition: all 0.3s ease;
-
-    @include mq(sp) {
-      font-size: rm(14);
-    }
   }
 
   .c-button__arrow {

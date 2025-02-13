@@ -54,6 +54,7 @@
     <div class="l-inner p-top-about__inner">
 <<<<<<< HEAD
       <div class="c-heading">
+<<<<<<< HEAD
         <h2 class="c-heading__title --about c-animated__leftSlideIn">当社について</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -61,6 +62,10 @@
         <h2 class="c-heading-top__title --about">当社について</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+        <h2 class="c-heading__title --about">当社について</h2>
+        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of a3174c5 (完成)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -76,7 +81,11 @@
           <figure class="p-top-about__img c-animated__blur">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.jpg" alt="コミュニケーションスキル習得をサポート">
           </figure>
+<<<<<<< HEAD
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--sp c-button-top u-sp c-animated__rightSlideIn">
+=======
+          <a href="" class="p-top-about__link--sp c-button-top u-sp">
+>>>>>>> parent of a3174c5 (完成)
             <span class="c-button-top__text">
               View more
               <span class="c-button-top__arrow"></span>
@@ -92,10 +101,11 @@
   </section>
 
   <!-- サービス -->
-  <section class="l-top__service p-top-service">
+  <section class="l-top-service p-top-service">
     <div class="l-inner">
 <<<<<<< HEAD
       <div class="c-heading">
+<<<<<<< HEAD
         <h2 class="c-heading__title --service c-animated__leftSlideIn">サービス</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -103,6 +113,10 @@
         <h2 class="c-heading-top__title --service">サービス</h2>
         <a href="" class="c-button-top u-pc">
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+        <h2 class="c-heading__title --service">サービス</h2>
+        <a href="" class="c-button-top u-pc">
+>>>>>>> parent of a3174c5 (完成)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -155,7 +169,11 @@
         <!-- /p-top-service__card -->
       </div>
       <!-- /p-top-service__cards -->
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="p-top-service__link--sp c-button-top u-sp c-animated__rightSlideIn">
+=======
+      <a href="" class="p-top-service__link--sp c-button-top u-sp">
+>>>>>>> parent of a3174c5 (完成)
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>
@@ -171,6 +189,7 @@
     <div class="l-inner">
 <<<<<<< HEAD
       <div class="c-heading">
+<<<<<<< HEAD
         <h2 class="c-heading__title --case --white c-animated__leftSlideIn">導入事例</h2>
         <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -178,6 +197,10 @@
         <h2 class="c-heading-top__title --case --white">導入事例</h2>
         <a href="" class="p-top-about__link--pc c-button-top u-pc">
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+        <h2 class="c-heading__title --case --white">導入事例</h2>
+        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of a3174c5 (完成)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -187,6 +210,7 @@
       </div>
       <!-- /c-heading-top -->
       <div class="p-top-case__cards">
+<<<<<<< HEAD
         <?php
          $args = array (
           'post_type' => 'case',
@@ -220,14 +244,75 @@
               <?php echo $terms[0]->name; ?>
               <?php endif; ?>
             </p>
+=======
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aaa.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">AAA株式会社　様</h3>
+            <p class="p-top-case__category">ビジネス英語研修</p>
           </div>
         </a>
         <!-- /p-top-case__card -->
-         <?php endwhile; ?>
-        <?php endif; ?>
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bbb.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">合同会社BBB　様</h3>
+            <p class="p-top-case__category">異文化コミュニケーション</p>
+          </div>
+        </a>
+        <!-- /p-top-case__card -->
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ccc.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">合同会社CCC　様</h3>
+            <p class="p-top-case__category">ビジネス留学プログラム</p>
+          </div>
+        </a>
+        <!-- /p-top-case__card -->
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ddd.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">DDD株式会社　様</h3>
+            <p class="p-top-case__category">異文化コミュニケーション</p>
+          </div>
+        </a>
+        <!-- /p-top-case__card -->
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eee.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">EEE株式会社　様</h3>
+            <p class="p-top-case__category">ビジネス留学プログラム</p>
+          </div>
+        </a>
+        <!-- /p-top-case__card -->
+        <a href="" class="p-top-case__card">
+          <div class="p-top-case__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fff.png" alt="">
+          </div>
+          <div class="p-top-case__body">
+            <h3 class="p-top-case__company">FFF株式会社　様</h3>
+            <p class="p-top-case__category">ビジネス英語研修</p>
+>>>>>>> parent of a3174c5 (完成)
+          </div>
+        </a>
+        <!-- /p-top-case__card -->
       </div>
       <!-- /p-top-case__cards -->
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-case__link--sp c-button-top u-sp c-animated__rightSlideIn">
+=======
+      <a href="" class="p-top-case__link--sp c-button-top u-sp">
+>>>>>>> parent of a3174c5 (完成)
         <span class="c-button-top__text">
           View more
           <span class="c-button-top__arrow"></span>
@@ -241,6 +326,7 @@
     <div class="l-inner">
 <<<<<<< HEAD
       <div class="c-heading">
+<<<<<<< HEAD
         <h2 class="c-heading__title --news c-animated__leftSlideIn">新着情報</h2>
         <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
 =======
@@ -248,6 +334,10 @@
         <h2 class="c-heading-top__title --news">新着情報</h2>
         <a href="" class="c-button-top u-pc">
 >>>>>>> parent of 29376cb (残り1ページ)
+=======
+        <h2 class="c-heading__title --news">新着情報</h2>
+        <a href="" class="c-button-top u-pc">
+>>>>>>> parent of a3174c5 (完成)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -305,7 +395,11 @@
         <!-- /p-top-news__box -->
       </div>
       <!-- /p-top-news__boxes -->
+<<<<<<< HEAD
       <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="p-top-news__link--sp c-button-top u-sp c-animated__rightSlideIn">
+=======
+      <a href="" class="p-top-news__link--sp c-button-top u-sp">
+>>>>>>> parent of a3174c5 (完成)
         <span class="c-button-top__text --blue">
           View more
           <span class="c-button-top__arrow --blue"></span>

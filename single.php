@@ -14,7 +14,7 @@
   </div><!-- /breadcrumb -->
 <?php endif; ?>
 
-<section class="l-low__article">
+<section class="l-low__contents">
   <div class="l-inner p-article__inner">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : ?>
@@ -22,9 +22,9 @@
         <div class="p-article__content">
           <div class="c-meta">
             <?php $category = get_the_category(); ?><?php if ($category[0]) : ?>
-            <a class="c-meta__category --single" href="<?php echo get_category_link($category[0]->term_id); ?>"><?php echo $category[0]->cat_name; ?></a>
+            <a class="c-meta__category" href="<?php echo get_category_link($category[0]->term_id); ?>"><?php echo $category[0]->cat_name; ?></a>
           <?php endif; ?>
-          <time datetime="<?php the_time('c') ?>" class="c-meta__time --single"><?php the_time('Y.m.d') ?></time>
+          <time datetime="<?php the_time('c') ?>" class="c-meta__time"><?php the_time('Y.m.d') ?></time>
           </div>
           <!-- /c-meta -->
           <h1 class="p-article__title"><?php the_title(); ?></h1>
