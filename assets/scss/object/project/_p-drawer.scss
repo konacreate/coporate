@@ -1,6 +1,5 @@
 @use "../../global" as *;
 
-
 //アイコン ====================
 .p-drawer__icon {
   position: absolute;
@@ -26,21 +25,20 @@
   width: 100%;
   height: rm(2.25);
   background: $color-main;
-
 }
 
 //メニューが開いている時 ========
 .p-drawer__icon.js-show {
   .p-drawer__icon--bar:nth-of-type(1) {
     rotate: 45deg;
-    translate: 0 rm(7.4);
+    translate: 0 rm(7);
   }
   .p-drawer__icon--bar:nth-of-type(2) {
     display: none;
   }
   .p-drawer__icon--bar:nth-of-type(3) {
     rotate: -45deg;
-    translate: 0 rm(-7.4);
+    translate: 0 rm(-7);
   }
 }
 
@@ -48,6 +46,7 @@
 .p-drawer {
   position: fixed;
   top: rm(60);
+  left: 0;
   z-index: $z-drawer;
   overflow-y: scroll;
   width: 100%;
@@ -62,22 +61,13 @@
   }
 }
 .p-drawer__icon--bar {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 //ドロワーの出現の動きを指定
 .p-drawer {
-<<<<<<< HEAD
   translate: 101%;
-<<<<<<< HEAD
   transition: translate 0.3s ease;
-=======
-  transition: translate 0.5s ease;
->>>>>>> parent of 29376cb (残り1ページ)
-=======
-  translate: 0 -120%;
-  transition: translate 0.5s ease;
->>>>>>> parent of a3174c5 (完成)
 
   &.js-show {
     translate: 0;
@@ -104,7 +94,7 @@
     color: $white;
     transition: opacity 0.3s ease;
 
-    @media(any-hover: hover) {
+    @media (any-hover: hover) {
       &:hover {
         opacity: 0.7;
       }
@@ -122,7 +112,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
 
-  @media(any-hover: hover) {
+  @media (any-hover: hover) {
     &:hover {
       background: $white;
       color: $color-main;
@@ -133,7 +123,7 @@
     background: $white;
     color: $color-main;
 
-    @media(any-hover: hover) {
+    @media (any-hover: hover) {
       &:hover {
         background: $color-dark;
         color: $white;

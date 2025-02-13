@@ -1,0 +1,26 @@
+@use "../../global" as *;
+
+.p-pagination-single {
+  margin-block-start: rm(40);
+  display: flex;
+  justify-content: space-between;;
+
+  a {
+    color: $color-main;
+    @include font(14, 500, 20, );
+    width: rm(114);
+    height: rm(36);
+    border-radius: rm(4);
+    border: 1px solid $color-main;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+
+    @media(any-hover: hover) {
+      &:hover {
+        background: $color-main;
+        color: $white;
+      }
+    }
+  }
+}

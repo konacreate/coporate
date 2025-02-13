@@ -9,6 +9,7 @@ html {
   }
 }
 
+
 body {
   color: $color-text;
   font-family: $ff;
@@ -59,6 +60,10 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+input {
+  background-color: unset;
 }
 
 @media (min-width: px($breakpoint)) {

@@ -63,11 +63,9 @@
 }
 
 .p-footer__link {
-  padding: vw(31) vw(98) vw(32) vw(100);
-  margin-block-start: vw(40);
+  margin-block-start: vw(41);
 
   @include mq(sp) {
-    padding: rm(26) rm(108) rm(26) rm(107);
     margin-block-start: rm(40);
   }
 }
@@ -101,6 +99,10 @@
   color: $white;
   font-style: normal;
   margin-block-start: vw(22);
+
+  @include mq(sp) {
+    margin-block-start: vw-sp(22);
+  }
 }
 
 .p-footer__copyright {

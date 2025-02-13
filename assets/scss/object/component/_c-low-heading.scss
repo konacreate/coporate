@@ -1,0 +1,10 @@
+@use "../../global" as *;
+
+.c-low-heading {
+  @include font(24, 700, 35, );
+  text-align: center;
+
+  &.--white {
+    color: $white;
+  }
+}

@@ -4,7 +4,7 @@
   margin-block: rm(60) 0;
 
   @include mq(sp) {
-    margin-block: rm(40) 0;
+    margin-block: rm(37) 0;
   }
 }
 
@@ -35,7 +35,7 @@ summary {
 
 
   @include mq(sp) {
-    padding-block: rm(18) rm(15);
+    padding-block: rm(17) rm(16);
   }
 
 
@@ -68,15 +68,25 @@ summary {
   &::before {
     width: rm(21);
     height: rm(2);
-    right: rm(12);
-    top: rm(10);
+    right: rm(13);
+    top: rm(14);
+
+    @include mq(sp) {
+      top: rm(11);
+      right: rm(8);
+    }
   }
 
   &::after {
     width: rm(2);
     height: rm(21);
     right: rm(22.5);
-    top: 0;
+    top: rm(5);
+
+    @include mq(sp) {
+      top: rm(1);
+      right: rm(18);
+    }
 }
 }
 
@@ -86,7 +96,7 @@ summary {
 
   @include mq(sp) {
     padding-inline: 0;
-    padding-block: rm(3) rm(14);
+    padding-block: rm(5) rm(14);
   }
 }
 

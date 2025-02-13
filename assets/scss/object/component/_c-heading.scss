@@ -1,0 +1,81 @@
+@use "../../global" as *;
+
+.c-heading {
+  display: flex;
+  justify-content: space-between;
+  height: rm(155);
+  align-items: center;
+
+  @include mq(sp) {
+    height: auto;
+    display: block;
+  }
+}
+
+.c-heading__title {
+  @include font(24, 700, 35, );
+  color: $color-main;
+  position: relative;
+  top: rm(60);
+
+  @include mq(sp) {
+    @include font(16, 700, 23, );
+    top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    @include font(100, 500, 120, );
+    left: 0;
+    bottom: 100%;
+    font-family: $ff-en;
+    font-style: italic;
+    white-space: nowrap;
+
+    @include mq(sp) {
+      bottom: calc(100%);
+      @include font(52, 500, 62, );
+    }
+  }
+
+  &.--about {
+    &::before {
+      content: 'ABOUT US';
+    }
+  }
+
+  &.--service {
+    &::before {
+      content: 'SERVICE';
+    }
+  }
+
+  &.--case {
+    &::before {
+      content: 'CASE STUDY';
+    }
+  }
+  &.--news {
+    &::before {
+      content: 'NEWS';
+    }
+  }
+
+
+  &.--mission {
+    &::before {
+      content: 'MISSION';
+    }
+  }
+
+  &.--vision {
+    &::before {
+      content: 'VISION';
+    }
+  }
+
+  &.--white {
+    color: $white;
+  }
+
+}

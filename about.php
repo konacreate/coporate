@@ -1,42 +1,35 @@
 <?php
+
 /**
  * Template Name: about
  */
- get_header();
+get_header();
 ?>
 
-<div class="l-low p-low__about">
-  <h1 class="p-low__heading">当社について</h1>
+<div class="l-low p-about">
+  <h1 class="c-low-title --about">当社について</h1>
 </div>
 
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
-    <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述 ?>
+    <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述 
+    ?>
   </div><!-- /breadcrumb -->
 <?php endif; ?>
 
-<<<<<<< HEAD
 <section class="l-low__contents p-about__contents">
-<<<<<<< HEAD
   <div class="l-inner__wide">
-<<<<<<< HEAD
     <div class="p-about__concept --mission c-animated__fadeIn --delay0">
-=======
-    <div class="p-about__concept --mission">
->>>>>>> parent of a3174c5 (完成)
-=======
-    <div class="p-about__concept --mission">
->>>>>>> parent of 0b44991 (アニメーション追加)
       <h2 class="p-about__concept-heading c-heading__title --mission --white">社会的使命</h2>
       <div class="p-about__message">
-        <h3 class="p-about__lead">人財育成を通じて、豊かな世界を創造する</h3>
+        <h3 class="p-about__lead">人財育成を通じて、<br class="u-sp">豊かな世界を創造する</h3>
         <p class="p-about__description">急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。</p>
       </div>
       <!-- /p-about__message -->
     </div>
     <!-- /p-about__concept --mission -->
-    <div class="p-about__concept --vision">
+    <div class="p-about__concept --vision c-animated__fadeIn --delay0">
       <h2 class="p-about__concept-heading c-heading__title --vision --white">企業理念</h2>
       <div class="p-about__message">
         <h3 class="p-about__lead">文化の垣根を越えた<br class="u-pc">人と人とのつながりが新しい価値を生む</h3>
@@ -45,10 +38,12 @@
       <!-- /p-about__message -->
     </div>
     <!-- /p-about__concept --vision -->
+  </div>
+  <!-- l-inner -->
   <div class="p-about__introduce">
     <div class="l-inner">
 
-      <div class="p-about__introduce-contents">
+      <div class="p-about__introduce-contents c-animated__fadeIn --delay0">
         <h2 class="p-about__introduce-heading">会社概要</h2>
         <table class="p-about__table">
           <tr>
@@ -94,10 +89,10 @@
   </div>
   <!-- /p-about__introduce -->
   <div class="p-about__officer">
-    <h2 class="c-low-heading">役員紹介</h2>
+    <h2 class="c-low-heading c-animated__fadeIn --delay0">役員紹介</h2>
     <div class="p-about__cards">
       <div class="p-about__card">
-        <div class="p-about__left">
+        <div class="p-about__left c-animated__leftSlideIn">
           <div class="p-about__name"><span>代表取締役社長</span><span>波瑠　慶太</span></div>
           <p class="p-about__text">20年間外資系企業に勤務し、世界17カ国でビジネスを展開。<br>様々な文化に触れ、コミュニケーションスキルを磨き、同時にその必要性を実感する。<br>自身も講師を務め、実体験から得られた知見を皆様に還元し、グローバルなビジネス展開をサポートいたします。</p>
           <div class="p-about__sns">
@@ -108,14 +103,14 @@
           <!-- /p-about__sns -->
         </div>
         <!-- /p-about__left -->
-        <div class="p-about__right">
+        <div class="p-about__right c-animated__rightSlideIn">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-officer1.jpg" alt="代表取締役社長 波瑠　慶太">
         </div>
         <!-- /p-about__right -->
       </div>
       <!-- /p-about__card -->
       <div class="p-about__card">
-        <div class="p-about__left">
+        <div class="p-about__left c-animated__leftSlideIn">
           <div class="p-about__name"><span>取締役</span><span>ジャック・スミス</span></div>
           <p class="p-about__text">オーストラリア出身。<br>英会話の講師として13年のキャリアがあります。<br>翻訳業務も担当しており、外国映画の日本版DVDの字幕やテレビ番組の英語をヒヤリングなども行なっております。<br>皆様に「より気持ちの伝わる英会話」を習得していただくサポートをいたします。</p>
           <div class="p-about__sns">
@@ -126,14 +121,14 @@
           <!-- /p-about__sns -->
         </div>
         <!-- /p-about__left -->
-        <div class="p-about__right">
+        <div class="p-about__right c-animated__rightSlideIn">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-officer2.jpg" alt="取締役 ジャック・スミス">
         </div>
         <!-- /p-about__right -->
       </div>
       <!-- /p-about__card -->
       <div class="p-about__card">
-        <div class="p-about__left">
+        <div class="p-about__left c-animated__leftSlideIn">
           <div class="p-about__name"><span>取締役</span><span>メアリー・ジャクソン</span></div>
           <p class="p-about__text">アメリカ出身。<br>メジャーリーグ球団「ニューヨークヤンキース」の通訳担当として7年間チームに在籍。<br>数多くの契約交渉の経験を活かし、国際ビジネスにおけるコミュニケーションのマナーから応用までお伝えいたします。</p>
           <div class="p-about__sns">
@@ -144,7 +139,7 @@
           <!-- /p-about__sns -->
         </div>
         <!-- /p-about__left -->
-        <div class="p-about__right">
+        <div class="p-about__right c-animated__rightSlideIn">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-officer3.jpg" alt="取締役 メアリー・ジャクソン">
         </div>
         <!-- /p-about__right -->
@@ -158,7 +153,5 @@
 </section>
 <!-- /p-about -->
 
-=======
->>>>>>> parent of 29376cb (残り1ページ)
 
 <?php get_footer(); ?>

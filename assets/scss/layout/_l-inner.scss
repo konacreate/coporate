@@ -21,3 +21,16 @@
     max-width: px($sp-inner);
   }
 }
+
+.l-inner__wide {
+  position: relative;
+  width: 100%;
+  max-width: px($pc-inner-sum);
+  height: inherit;
+  padding: 0 rm($pc-sidePadding);
+  margin-inline: auto;
+
+  @include mq(sp) {
+    padding: 0;
+  }
+}

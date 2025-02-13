@@ -1,11 +1,11 @@
 @use "../../global" as *;
 
 .p-top-case {
-  background: url(../img/case-bg-pc.png) no-repeat center center / cover;
+  background: url(../img/bg-pc.png) no-repeat center center / cover;
   padding-block: rm(100) rm(122);
 
   @include mq(sp) {
-    background: url(../img/sp/case-bg-sp.png) no-repeat center center / cover;
+    background: url(../img/sp/bg-sp.png) no-repeat center center / cover;
     padding-block: rm(124) rm(63);
   }
 }
@@ -21,13 +21,14 @@
     grid-template-columns: repeat(1, 1fr);
     margin-block-start: rm(40);
     column-gap: 0;
-    row-gap: rm(52);
+    row-gap: rm(54);
+    max-width: 600px;
+    margin-inline: auto;
   }
 }
 
 .p-top-case__card {
  
-
   @media(any-hover: hover) {
     &:hover {
       .p-top-case__body::after {
@@ -39,20 +40,15 @@
 }
 
 .p-top-case__img {
-  width: 100%;
+  width: rm(320);
+  height: rm(240);
   background: $white;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   @include mq(sp) {
     width: 100%;
     height: vw-sp(251);
   }
-=======
->>>>>>> parent of 29376cb (残り1ページ)
 
-=======
->>>>>>> parent of a3174c5 (完成)
   img {
     width: 100%;
     object-fit: cover;
@@ -71,6 +67,10 @@
     right: rm(8);
     background: url(../img/arrow-icon-white.svg) no-repeat center center / contain;
     transition: all 0.3s ease;
+
+    @include mq(sp) {
+      right: 0;
+    }
   }
 }
 
@@ -78,10 +78,17 @@
   color: $white;
   font-size: rm(16);
   font-weight: 700;
-  margin-block-start: rm(16);
+  margin-block-start: rm(18);
+  display: inline-flex;
+  column-gap: rm(16);
 
   @include mq(sp) {
-    margin-block-start: rm(14);
+    margin-block-start: rm(15);
+  }
+
+  span {
+    font-size: rm(16);
+    font-weight: 700;
   }
 }
 
@@ -91,17 +98,17 @@
   font-weight: 700;
   border: 1px solid $white;
   padding: rm(5) rm(15);
-  margin-block-start: rm(12);
+  margin-block-start: rm(16);
   width: fit-content;
   line-height: calc(20 / 14);
 
   @include mq(sp) {
-    margin-block-start: rm(11);
+    margin-block-start: rm(15);
   }
 }
 
 .p-top-case__link--sp {
-  margin-block-start: rm(52);
+  margin-block-start: rm(58);
   width: fit-content;
   display: block;
   margin-inline-start: auto;

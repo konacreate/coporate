@@ -1,0 +1,29 @@
+@use "../../global" as *;
+
+.p-contact {
+  background: url(../img/contact-top.jpg) no-repeat center center / cover;
+}
+
+.p-contact__inner {
+  padding-inline: rm(40);
+  width: min(calc(688px + rm(40) * 2), 100%);
+  margin-inline: auto;
+
+  @include mq(sp) {
+    padding-inline: rm(20);
+    max-width: 688px;
+    width: 100%;
+  }
+}
+
+.p-contact__text {
+  @include font(14, 500, 24, );
+}
+
+.p-contact__contents {
+  margin-block-start: rm(80);
+
+  @include mq(sp) {
+    margin-block-start: rm(60);
+  }
+}

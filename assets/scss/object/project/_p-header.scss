@@ -1,11 +1,26 @@
 @use "../../global" as *;
 
 //ヘッダー ========================
+.p-header__space {
+  &.js-drawer-open {
+    padding-block-start: calc(79 / 1199 * 100vw);
+     @include mq(sp) {
+      padding-block-start: rm(60);
+    }
+  }
+}
+
 .p-header {
   width: 100%;
   height: auto;
   background: $white;
-  overflow: hidden;
+
+  &.js-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-header;
+  }
 }
 .p-header__inner {
   display: grid;
@@ -25,11 +40,18 @@
   font-weight: 700;
   line-height: calc(47 / 40);
   text-transform: capitalize;
+  transition: opacity 0.3s ease;
 
   @include mq(sp) {
     font-size: rm(28);
     letter-spacing: 0.005em;
     line-height: calc(33 / 28);
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 .p-header__nav {
@@ -68,10 +90,27 @@
   li a {
     @include font(14, 500, 24, );
     transition: opacity 0.3s ease;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(100% + rm(6));
+      left: 50%;
+      translate: -50%;
+      scale: 0 1;
+      transform-origin: center center;
+      transition: scale 0.3s ease;
+      background: $color-dark;
+      width: 100%;
+      height: rm(2);
+    }
 
     @media(any-hover: hover) {
       &:hover {
-        opacity: 0.7;
+        &::before {
+          scale: 1 1;
+        }
       }
     }
   }

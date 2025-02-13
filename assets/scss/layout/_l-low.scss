@@ -15,6 +15,11 @@
     width: vw(365.654);
     height: 100%;
     z-index: 3;
+
+    @include mq(sp) {
+      background-image: url(../img/sp/top-decoration-sp.svg);
+      width: rm(165.654);
+    }
   }
 
   &::after {
@@ -27,7 +32,6 @@
     top: 0;
     left: 0;
   };
-<<<<<<< HEAD
 }
 
 .l-low__contents {
@@ -36,7 +40,6 @@
   @include mq(sp) {
     padding-block: rm(60) rm(100);
   }
-<<<<<<< HEAD
 }
 
 .l-low__article {
@@ -53,8 +56,4 @@
   @include mq(sp) {
     padding-block: rm(60) rm(100);
   }
-=======
->>>>>>> parent of 29376cb (残り1ページ)
-=======
->>>>>>> parent of a3174c5 (完成)
 }

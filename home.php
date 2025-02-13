@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php get_header(); ?>
 
 <div class="l-low p-news">
@@ -21,7 +20,7 @@
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : ?>
           <?php the_post(); ?>
-            <a href="" class="p-news__article">
+            <a href="<?php the_permalink(); ?>" class="p-news__article">
               <div class="p-news__img">
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail(); ?>
@@ -44,7 +43,7 @@
                   <?php endif; ?>
                   </div>
                   <!-- /c-meta__wrapper -->
-                  <time datetime="<?php the_time('c') ?>" class="c-meta__time"><?php the_time('Y.m.d') ?></time>
+                  <time datetime="<?php the_time('c'); ?>" class="c-meta__time"><?php the_time('Y.m.d'); ?></time>
                 </div>
                 <!-- /p-news__meta c-meta -->
                 <h3 class="p-news__title"><?php the_title(); ?></h3>
@@ -84,5 +83,3 @@
 
 
 <?php get_footer(); ?>
-=======
->>>>>>> parent of 29376cb (残り1ページ)

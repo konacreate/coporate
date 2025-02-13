@@ -48,10 +48,10 @@
 }
 
 .p-download__text {
-  margin-block-start: rm(38);
+  margin-block: rm(38) rm(115);
   @include font(14, 500, 24, );
 
   @include mq(sp) {
-    margin-block-start: rm(40);
+    margin-block: rm(40) 0;
   }
 }

@@ -2,45 +2,70 @@
 
 .c-button {
   border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .c-button__primary {
-<<<<<<< HEAD
   border-color: $color-main;
-  background: $white;
   text-align: center;
   color: $color-main;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $color-main;
+    scale: 0 1;
+    transform-origin: right top;
+    transition: scale 0.3s ease;
+  }
 
   @media(any-hover: hover) {
     &:hover {
-<<<<<<< HEAD
-=======
-  border-color: $hover-color;
-  background: $white;
-  text-align: center;
-  transition: all 0.3s ease;
-  color: $hover-color;
-
-  @media(any-hover: hover) {
-    &:hover {
-      background: $hover-color;
->>>>>>> parent of 29376cb (残り1ページ)
-=======
-      background: $color-main;
->>>>>>> parent of 0b44991 (アニメーション追加)
       color: $white;
+
+      &::before {
+        scale: 1;
+        transform-origin: left center;
+      }
     }
   }
 }
 
 .c-button__secondary {
-  background: $hover-color;
+  background: $color-main;
   color: $white;
   text-align: center;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $color-dark;
+    scale: 0 1;
+    transform-origin: right top;
+    transition: scale 0.3s ease;
+  }
   @media(any-hover: hover) {
     &:hover {
-      background: $color-dark;
+      &::before {
+        scale: 1 1;
+        transform-origin: left center;
+      }
     }
   }
 }
@@ -49,8 +74,6 @@
   color: $yellow;
   border: 3px solid $yellow;
   transition: all 0.3s ease;
-<<<<<<< HEAD
-<<<<<<< HEAD
   padding: vw(32) vw(101) vw(32) vw(98);
   position: relative;
 
@@ -97,8 +120,6 @@
     }
   }
 
-=======
->>>>>>> parent of a3174c5 (完成)
 }
 
 .c-button__quaternary {
@@ -109,10 +130,9 @@
 
 
   @include mq(sp) {
-    font-size: rm(14);
     width: rm(295);
     height: rm(72);
-    padding-inline: 0;
+    padding: rm(24) 0 rm(22);
   }
 
   .c-button__text,
@@ -120,6 +140,10 @@
     @include font(16, 500, 24, );
     color: $color-main;
     transition: all 0.3s ease;
+
+    @include mq(sp) {
+      font-size: rm(14);
+    }
   }
 
   .c-button__arrow {
@@ -149,6 +173,4 @@
       }
     }
   }
-=======
->>>>>>> parent of 29376cb (残り1ページ)
 }
