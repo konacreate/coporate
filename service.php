@@ -1,15 +1,12 @@
 <?php
-
 /**
  * Template Name: service
  */
 get_header();
 ?>
-
 <div class="l-low p-service">
   <h1 class="c-low-title --service">サービス</h1>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
@@ -17,7 +14,6 @@ get_header();
     ?>
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__contents">
   <h2 class="p-service__heading c-animated__scale">世界で活躍できる<br>グローバルな人材を育てる<br class="u-sp">３つの研修プログラム</h2>
   <div class="p-service__programs">
@@ -273,7 +269,4 @@ get_header();
   </div>
   <!-- /p-service__qa -->
 </section>
-
-
-
 <?php get_footer(); ?>

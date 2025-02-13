@@ -3,22 +3,17 @@
 Template Name: 資料ダウンロード
 */
 ?>
-
 <?php get_header(); ?>
-
 <div class="l-low p-download">
   <p class="c-low-title --download">資料ダウンロード</p>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
     <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述
     ?>
-
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__contents l-low__download">
   <div class="l-inner p-download__inner">
     <div class="p-download__content">
@@ -30,7 +25,6 @@ Template Name: 資料ダウンロード
     </div>
     <div class="p-download-form --thanks">
       <p class="p-download-form__heading">資料請求いただき<br>ありがとうございました！</p>
-
       <p class="p-download-form__thanks-message">資料は以下のリンクよりダウンロードください。</p>
       <div class="p-download-form__thanks-button">
         <span>&rarr;</span>
@@ -42,5 +36,4 @@ Template Name: 資料ダウンロード
   </div>
   <!-- /l-inner p-download__inner -->
 </section>
-
 <?php get_footer(); ?>

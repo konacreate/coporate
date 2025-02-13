@@ -3,11 +3,9 @@
  * Archive Business
  */
 get_header(); ?>
-
 <div class="l-low p-case">
   <h1 class="c-low-title --case">導入事例</h1>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
@@ -15,7 +13,6 @@ get_header(); ?>
     ?>
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__contents p-case__contents">
   <div class="l-inner">
     <div class="p-case__nav">
@@ -31,7 +28,6 @@ get_header(); ?>
           <?php if (have_posts()) : ?>
             <?php while(have_posts()) : ?>
               <?php the_post(); ?>
-
           <div class="p-case__category-card">
             <div class="p-case__card-heading">
               <div class="p-case__head-genre">Webマーケティング事業</div>

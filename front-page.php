@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <main class="l-main">
   <div class="p-mv">
     <div class="p-mv__slider">
@@ -84,7 +83,6 @@
     <div class="p-top-about__bg p-bg"></div>
     <div class="p-top-about__bg--base p-top-about__bg--right u-pc"></div>
   </section>
-
   <!-- サービス -->
   <section class="l-top__service p-top-service">
     <div class="l-inner">
@@ -272,5 +270,4 @@
     <!-- /l-inner -->
     <div class="p-top-news__bg p-bg"></div>
   </section>
-
 <?php get_footer(); ?>

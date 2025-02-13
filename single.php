@@ -1,18 +1,14 @@
 <?php get_header(); ?>
-
 <div class="l-low p-article">
   <p class="c-low-title --news">ニュース</p>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
     <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述
     ?>
-    
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__article">
   <div class="l-inner p-article__inner">
     <?php if (have_posts()) : ?>
@@ -39,7 +35,6 @@
             <?php the_content(); ?>
           </div>
           <!-- /p-article__body -->
-
           <div class="p-pagination-single">
             <div class="previous-post">
               <?php previous_post_link('%link', '< 前の記事へ'); ?>
@@ -58,5 +53,4 @@
   <!-- /l-inner -->
 </section>
 <!-- /l-low__contents -->
-
 <?php get_footer(); ?>

@@ -1,18 +1,14 @@
 <?php get_header(); ?>
-
 <div class="l-low p-download">
   <p class="c-low-title --download">資料ダウンロード</p>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
     <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述
     ?>
-
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__contents l-low__download">
   <div class="l-inner p-download__inner">
     <div class="p-download__content">
@@ -29,5 +25,4 @@
   </div>
   <!-- /l-inner p-download__inner -->
 </section>
-
 <?php get_footer(); ?>

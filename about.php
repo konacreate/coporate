@@ -1,15 +1,12 @@
 <?php
-
 /**
  * Template Name: about
  */
 get_header();
 ?>
-
 <div class="l-low p-about">
   <h1 class="c-low-title --about">当社について</h1>
 </div>
-
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
@@ -17,7 +14,6 @@ get_header();
     ?>
   </div><!-- /breadcrumb -->
 <?php endif; ?>
-
 <section class="l-low__contents p-about__contents">
   <div class="l-inner__wide">
     <div class="p-about__concept --mission c-animated__fadeIn --delay0">
@@ -152,6 +148,4 @@ get_header();
   <!-- /p-about__officer -->
 </section>
 <!-- /p-about -->
-
-
 <?php get_footer(); ?>
