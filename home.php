@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); ?>
 
 <div class="l-low p-news">
@@ -83,3 +84,5 @@
 
 
 <?php get_footer(); ?>
+=======
+>>>>>>> parent of 29376cb (残り1ページ)

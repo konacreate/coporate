@@ -14,13 +14,7 @@
   width: 100%;
   height: auto;
   background: $white;
-
-  &.js-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: $z-header;
-  }
+  overflow: hidden;
 }
 .p-header__inner {
   display: grid;

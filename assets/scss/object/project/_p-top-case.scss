@@ -1,11 +1,11 @@
 @use "../../global" as *;
 
 .p-top-case {
-  background: url(../img/bg-pc.png) no-repeat center center / cover;
+  background: url(../img/case-bg-pc.png) no-repeat center center / cover;
   padding-block: rm(100) rm(122);
 
   @include mq(sp) {
-    background: url(../img/sp/bg-sp.png) no-repeat center center / cover;
+    background: url(../img/sp/case-bg-sp.png) no-repeat center center / cover;
     padding-block: rm(124) rm(63);
   }
 }
@@ -29,6 +29,7 @@
 
 .p-top-case__card {
  
+
   @media(any-hover: hover) {
     &:hover {
       .p-top-case__body::after {
@@ -44,10 +45,13 @@
   height: rm(240);
   background: $white;
 
+<<<<<<< HEAD
   @include mq(sp) {
     width: 100%;
     height: vw-sp(251);
   }
+=======
+>>>>>>> parent of 29376cb (残り1ページ)
 
   img {
     width: 100%;

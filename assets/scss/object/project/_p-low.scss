@@ -1,0 +1,27 @@
+@use "../../global" as *;
+
+.p-low__about {
+  background: url(../img/about-top-pc.png) no-repeat center center / cover;
+}
+
+.p-low__heading {
+  @include font(20, 700, 29, );
+  position: relative;
+  background: $white;
+  color: $color-main;
+  z-index: 5;
+  width: fit-content;
+  top: vw(151);
+  left: vw(220);
+
+  &::before {
+    content: 'ABOUT US';
+    position: absolute;
+    @include font(60, 500, 72, );
+    font-family: $ff-en;
+    font-style: italic;
+    bottom: calc(100% +  rm(8));
+    white-space: nowrap;
+    background: $white;
+  }
+}

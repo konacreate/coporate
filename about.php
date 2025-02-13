@@ -1,23 +1,22 @@
 <?php
-
 /**
  * Template Name: about
  */
-get_header();
+ get_header();
 ?>
 
-<div class="l-low p-about">
-  <h1 class="c-low-title --about">当社について</h1>
+<div class="l-low p-low__about">
+  <h1 class="p-low__heading">当社について</h1>
 </div>
 
 <?php if (function_exists('bcn_display')) : ?>
   <!-- breadcrumb -->
   <div class="p-breadcrumb">
-    <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述 
-    ?>
+    <?php bcn_display(); // BreadcrumbNavXTのパンくずを表示するための記述 ?>
   </div><!-- /breadcrumb -->
 <?php endif; ?>
 
+<<<<<<< HEAD
 <section class="l-low__contents p-about__contents">
   <div class="l-inner__wide">
     <div class="p-about__concept --mission c-animated__fadeIn --delay0">
@@ -153,5 +152,7 @@ get_header();
 </section>
 <!-- /p-about -->
 
+=======
+>>>>>>> parent of 29376cb (残り1ページ)
 
 <?php get_footer(); ?>

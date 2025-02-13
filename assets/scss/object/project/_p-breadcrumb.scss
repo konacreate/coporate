@@ -6,6 +6,7 @@
   max-width: 1180px;
   padding-inline: vw(40);
 
+<<<<<<< HEAD
   @include mq(sp) {
     padding-inline: rm(20);
     margin-block-start: rm(10);
@@ -21,6 +22,9 @@
   }
 
   a {
+=======
+  .home {
+>>>>>>> parent of 29376cb (残り1ページ)
     color: #888;
     transition: opacity 0.3s ease;
 

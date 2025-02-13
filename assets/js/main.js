@@ -1,8 +1,31 @@
+<<<<<<< HEAD
 gsap.registerPlugin(ScrollTrigger);
+=======
+/**
+* 最大幅に基づいてviewport設定を切り替える関数。
+* @function
+* @param {number} maxWidth - viewportを固定する際の最大幅
+*/
+const switchViewport = (maxWidth) => {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  const value =
+    window.outerWidth > maxWidth
+      ? "width=device-width,initial-scale=1"
+      : `width=${maxWidth}`;
+  if (viewport.getAttribute("content") !== value) {
+    viewport.setAttribute("content", value);
+  }
+};
+addEventListener("resize", () => switchViewport(375));
+switchViewport(375);
+
+
+>>>>>>> parent of 29376cb (残り1ページ)
 
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
   //定義
+<<<<<<< HEAD
   const drawerIcon = document.querySelector(".p-drawer__icon");
   const drawer = document.querySelector(".p-drawer");
   const drawerNavItem = document.querySelectorAll(
@@ -11,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerSpace = document.querySelector(".p-header__space");
   const headerHeight = document.querySelector(".p-header").offsetHeight;
   const header = document.querySelector(".p-header");
+=======
+  const drawerIcon = document.querySelector('.p-drawer__icon');
+  const drawer = document.querySelector('.p-drawer');
+  const drawerNavItem = document.querySelectorAll('.p-drawer__body a[href^="#"]');
+  const headerHeight = document.querySelector('.p-header').offsetHeight;
+>>>>>>> parent of 29376cb (残り1ページ)
   const breakpoint = 768;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
@@ -20,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!drawer.classList.contains("js-show")) {
       drawer.classList.add("js-show");
       drawerIcon.classList.add("js-show");
+<<<<<<< HEAD
       header.classList.add("js-fixed");
       headerSpace.classList.add("js-drawer-open");
 
@@ -38,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
           el.setAttribute("tabindex", "-1"); // メニュー外の要素をフォーカスできないようにする
         }
       });
+=======
+>>>>>>> parent of 29376cb (残り1ページ)
     }
   };
 
@@ -46,8 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (drawer.classList.contains("js-show")) {
       drawer.classList.remove("js-show");
       drawerIcon.classList.remove("js-show");
+<<<<<<< HEAD
       header.classList.remove("js-fixed");
       headerSpace.classList.remove("js-drawer-open");
+=======
+>>>>>>> parent of 29376cb (残り1ページ)
       isMenuOpen = false;
 
       // 背景のスクロールを元に戻す
@@ -169,14 +204,8 @@ const swiperMV = new Swiper(".js-mv-swiper", {
 window.addEventListener("load", function () {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-  // swiper-wrapperが存在するか確認
-  if (!swiperWrapper) return;
-
   // 現在のすべてのスライドを取得
   const slides = document.querySelectorAll(".swiper-slide");
-
-  // swiper-slideが存在するか確認
-  if (slides.length === 0) return;
 
   // 複製の際に必要な数を計算
   const slideCount = slides.length;
@@ -203,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
   setUpAccordion();
 });
@@ -467,3 +497,5 @@ if (!isFirstVisit) {
   // 2回目以降の訪問時に発火させるもの
   loadingScreen.style.display = "none";
 }
+=======
+>>>>>>> parent of 29376cb (残り1ページ)

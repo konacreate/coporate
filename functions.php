@@ -19,10 +19,3 @@ function my_script_init() {
   }
   add_action("wp_enqueue_scripts", "my_script_init");
 
-add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
-function wpcf7_autop_return_false()
-{
-    return false;
-}
-
-

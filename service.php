@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /**
@@ -277,3 +278,5 @@ get_header();
 
 
 <?php get_footer(); ?>
+=======
+>>>>>>> parent of 29376cb (残り1ページ)

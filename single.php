@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); ?>
 
 <div class="l-low p-article">
@@ -60,3 +61,5 @@
 <!-- /l-low__contents -->
 
 <?php get_footer(); ?>
+=======
+>>>>>>> parent of 29376cb (残り1ページ)

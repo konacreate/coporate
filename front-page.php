@@ -52,9 +52,15 @@
   <!-- 当社について -->
   <section class="p-top-about">
     <div class="l-inner p-top-about__inner">
+<<<<<<< HEAD
       <div class="c-heading">
         <h2 class="c-heading__title --about c-animated__leftSlideIn">当社について</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
+=======
+      <div class="c-heading-top">
+        <h2 class="c-heading-top__title --about">当社について</h2>
+        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of 29376cb (残り1ページ)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -88,9 +94,15 @@
   <!-- サービス -->
   <section class="l-top__service p-top-service">
     <div class="l-inner">
+<<<<<<< HEAD
       <div class="c-heading">
         <h2 class="c-heading__title --service c-animated__leftSlideIn">サービス</h2>
         <a href="<?php echo esc_url(get_permalink(get_page_by_path('service'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
+=======
+      <div class="c-heading-top">
+        <h2 class="c-heading-top__title --service">サービス</h2>
+        <a href="" class="c-button-top u-pc">
+>>>>>>> parent of 29376cb (残り1ページ)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -157,9 +169,15 @@
   <!-- 導入事例 -->
   <section class="l-top__case p-top-case">
     <div class="l-inner">
+<<<<<<< HEAD
       <div class="c-heading">
         <h2 class="c-heading__title --case --white c-animated__leftSlideIn">導入事例</h2>
         <a href="<?php echo esc_url(get_post_type_archive_link('case')); ?>" class="p-top-about__link--pc c-button-top u-pc c-animated__rightSlideIn">
+=======
+      <div class="c-heading-top">
+        <h2 class="c-heading-top__title --case --white">導入事例</h2>
+        <a href="" class="p-top-about__link--pc c-button-top u-pc">
+>>>>>>> parent of 29376cb (残り1ページ)
           <span class="c-button-top__text">
             View more
             <span class="c-button-top__arrow"></span>
@@ -167,7 +185,7 @@
           </span>
         </a>
       </div>
-      <!-- /c-heading -->
+      <!-- /c-heading-top -->
       <div class="p-top-case__cards">
         <?php
          $args = array (
@@ -221,9 +239,15 @@
   <!-- 新着情報 -->
   <section class="l-top__news p-top-news">
     <div class="l-inner">
+<<<<<<< HEAD
       <div class="c-heading">
         <h2 class="c-heading__title --news c-animated__leftSlideIn">新着情報</h2>
         <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="c-button-top u-pc c-animated__rightSlideIn">
+=======
+      <div class="c-heading-top">
+        <h2 class="c-heading-top__title --news">新着情報</h2>
+        <a href="" class="c-button-top u-pc">
+>>>>>>> parent of 29376cb (残り1ページ)
           <span class="c-button-top__text --black">
             View more
             <span class="c-button-top__arrow --black"></span>
@@ -231,6 +255,7 @@
           </span>
         </a>
       </div>
+<<<<<<< HEAD
       <div class="p-top-news__boxes  c-animated__fadeIn">
       <?php $recent_query = new WP_Query(
             array (
@@ -245,19 +270,39 @@
             <?php while($recent_query->have_posts()) : ?>
               <?php $recent_query->the_post(); ?>
         <a href="<?php the_permalink(); ?>" class="p-top-news__box">
+=======
+      <div class="p-top-news__boxes">
+        <a class="p-top-news__box">
+>>>>>>> parent of 29376cb (残り1ページ)
           <div class="p-top-news__meta">
-          <?php $category = get_the_category(); ?><?php if ($category[0]) : ?>
             <p class="p-top-news__category">
-            <?php echo $category[0]->cat_name; ?>
+              営業時間
             </p>
-            <?php endif; ?>
-            <time datetime="<?php the_time('c'); ?>" class="p-top-news__time"><?php the_time('Y.m.d'); ?></time>
+            <time datetime="" class="p-top-news__time">2021.07.20</time>
           </div>
-          <h3 class="p-top-news__title"><?php the_title(); ?></h3>
+          <h3 class="p-top-news__title">お盆期間中の営業について</h3>
         </a>
         <!-- /p-top-news__box -->
-         <?php endwhile; ?>
-         <?php endif; ?>
+        <a class="p-top-news__box">
+          <div class="p-top-news__meta">
+            <p class="p-top-news__category">
+              その他
+            </p>
+            <time datetime="" class="p-top-news__time">2021.06.01</time>
+          </div>
+          <h3 class="p-top-news__title">新型コロナウイルス対策ご協力のお願い</h3>
+        </a>
+        <!-- /p-top-news__box -->
+        <a class="p-top-news__box">
+          <div class="p-top-news__meta">
+            <p class="p-top-news__category">
+              その他
+            </p>
+            <time datetime="" class="p-top-news__time">2021.05.01</time>
+          </div>
+          <h3 class="p-top-news__title">オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について</h3>
+        </a>
+        <!-- /p-top-news__box -->
       </div>
       <!-- /p-top-news__boxes -->
       <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="p-top-news__link--sp c-button-top u-sp c-animated__rightSlideIn">

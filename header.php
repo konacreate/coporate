@@ -17,7 +17,7 @@
   <div class="p-header__space"></div>
   <header class="p-header">
     <div class="p-header__inner">
-      <a href="<?php echo home_url('/'); ?>" class="p-header__logo u-italic">global standard</a>
+      <a href="" class="p-header__logo u-italic">global standard</a>
       <nav class="p-header__nav">
         <ul class="p-header__list">
           <li><a href="<?php echo home_url('/'); ?>">トップ</a></li>
@@ -33,7 +33,12 @@
       </nav>
     </div>
   </header>
+<<<<<<< HEAD
   <button type="button" class="p-drawer__icon" aria-expanded="false" aria-controls="menu" aria-label="メニュー">
+=======
+
+  <button class="p-drawer__icon">
+>>>>>>> parent of 29376cb (残り1ページ)
     <div class="p-drawer__icon--bar"></div>
     <div class="p-drawer__icon--bar"></div>
     <div class="p-drawer__icon--bar"></div>
